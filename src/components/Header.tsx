@@ -32,8 +32,7 @@ export default function Header() {
         {/* Logo and Categories */}
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
-            <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">SkillNexa</span>
+            <img src="/src/assets/skillnexa-logo.png" alt="SkillNexa" className="h-8" />
           </Link>
           
           <DropdownMenu>

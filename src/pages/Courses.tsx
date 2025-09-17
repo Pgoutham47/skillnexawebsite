@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import CourseCard from '@/components/CourseCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -99,14 +100,6 @@ export default function Courses() {
       <Header />
       
       <main className="container px-4 py-8">
-        {/* Page Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Our Courses</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover world-class courses designed by industry experts to advance your career
-          </p>
-        </div>
-
         {/* Filters */}
         <div className="mb-8 space-y-6">
           {/* Search */}
@@ -163,6 +156,8 @@ export default function Courses() {
           </div>
         )}
       </main>
+      
+      <Footer />
     </div>
   );
 }
