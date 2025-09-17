@@ -27,12 +27,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* Top Row - Logo, Categories, Search, Auth Buttons */}
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo and Categories */}
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
             <BookOpen className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">EduPlatform</span>
+            <span className="text-2xl font-bold text-primary">SkillNexa</span>
           </Link>
           
           <DropdownMenu>
@@ -67,28 +68,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-6">
-          <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
-            Home
-          </Link>
-          <Link to="/courses" className="text-sm font-medium hover:text-primary transition-colors">
-            Courses
-          </Link>
-          <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
-            About Us
-          </Link>
-          <Link to="/instructor" className="text-sm font-medium hover:text-primary transition-colors">
-            Become an Instructor
-          </Link>
-          <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">
-            Blog
-          </Link>
-          <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-            Contact
-          </Link>
-        </nav>
-
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center space-x-4">
           <Button variant="outline" size="sm">
@@ -108,6 +87,32 @@ export default function Header() {
         >
           {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </Button>
+      </div>
+
+      {/* Bottom Row - Navigation Menu (Desktop) */}
+      <div className="hidden lg:block border-t border-border/40">
+        <div className="container px-4">
+          <nav className="flex items-center justify-center space-x-8 py-3">
+            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">
+              Home
+            </Link>
+            <Link to="/courses" className="text-sm font-medium hover:text-primary transition-colors">
+              Courses
+            </Link>
+            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors">
+              About Us
+            </Link>
+            <Link to="/instructor" className="text-sm font-medium hover:text-primary transition-colors">
+              Become an Instructor
+            </Link>
+            <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">
+              Contact
+            </Link>
+          </nav>
+        </div>
       </div>
 
       {/* Mobile Menu */}
