@@ -52,10 +52,10 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8">
+              <Button size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
                 Create Your Free Account
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
+              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
                 View Courses
               </Button>
             </div>

@@ -32,7 +32,7 @@ export default function Header() {
         {/* Logo and Categories */}
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/src/assets/skillnexa-logo.png" alt="SkillNexa" className="h-8" />
+            <img src="/src/assets/skillnexa-logo-new.svg" alt="SKILLneXa" className="h-8" />
           </Link>
           
           <DropdownMenu>
@@ -68,11 +68,11 @@ export default function Header() {
         </div>
 
         {/* Auth Buttons */}
-        <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" size="sm">
+        <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+          <Button variant="outline" size="sm" className="text-xs lg:text-sm">
             Login
           </Button>
-          <Button size="sm">
+          <Button size="sm" className="text-xs lg:text-sm">
             Get Started
           </Button>
         </div>
@@ -149,10 +149,10 @@ export default function Header() {
             </nav>
             
             <div className="flex flex-col space-y-2 pt-4 border-t">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="w-full">
                 Login
               </Button>
-              <Button size="sm">
+              <Button size="sm" className="w-full">
                 Get Started
               </Button>
             </div>

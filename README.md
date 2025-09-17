@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+# SKILLneXa - Online Learning Platform
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/a14152f5-9a0d-4f18-b291-36face0ee8ad
+SKILLneXa is a modern online learning platform that connects learners with industry experts through innovative online learning experiences. Our mission is to democratize quality education by providing access to world-class courses in technology, programming, and professional development.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Expert-Led Courses**: Learn from industry professionals with real-world experience
+- **Modern Curriculum**: Up-to-date content covering the latest technologies and trends
+- **Interactive Learning**: Hands-on projects and practical exercises
+- **Flexible Schedule**: Learn at your own pace with lifetime access
+- **Career Support**: Job placement assistance and career guidance
+- **Certification**: Verified certificates upon course completion
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/a14152f5-9a0d-4f18-b291-36face0ee8ad) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Fast build tool and development server
+- **TypeScript** - Type-safe JavaScript development
+- **React** - Modern UI library for building user interfaces
+- **shadcn/ui** - Beautiful and accessible component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **Lucide React** - Beautiful icons
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/a14152f5-9a0d-4f18-b291-36face0ee8ad) and click on Share -> Publish.
+Follow these steps to run the project locally:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+# Step 1: Clone the repository
+git clone <YOUR_GIT_URL>
 
-Yes, you can!
+# Step 2: Navigate to the project directory
+cd spark-learn-red
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# Step 3: Install dependencies
+npm install
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Step 4: Start the development server
+npm run dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Course Categories
+
+- **Web Development** - Full-stack web development courses
+- **DevOps** - Containerization, CI/CD, and cloud technologies
+- **Machine Learning** - AI and data science courses
+- **Cybersecurity** - Ethical hacking and security courses
+
+## Contact
+
+For support or inquiries, please contact us at:
+- Email: support@skillnexa.com
+- Website: https://skillnexa.com
+
+## License
+
+This project is proprietary software owned by SKILLneXa.

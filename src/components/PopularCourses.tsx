@@ -10,8 +10,8 @@ const popularCourses = [
     id: '1',
     title: 'Complete Web Development Bootcamp',
     description: 'Learn HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build real projects and get job-ready.',
-    price: 89,
-    originalPrice: 199,
+    price: 18500,
+    originalPrice: 25000,
     duration: '40 hours',
     students: 15420,
     rating: 4.8,
@@ -21,24 +21,24 @@ const popularCourses = [
   },
   {
     id: '2', 
-    title: 'Digital Marketing Mastery',
-    description: 'Master SEO, social media marketing, Google Ads, and content marketing strategies.',
-    price: 75,
-    originalPrice: 150,
-    duration: '25 hours',
+    title: 'DevOps & AWS Mastery',
+    description: 'Master DevOps practices, AWS cloud services, Docker, Kubernetes, and CI/CD pipelines.',
+    price: 18500,
+    originalPrice: 25000,
+    duration: '45 hours',
     students: 8930,
     rating: 4.7,
-    thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400',
+    thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400',
     instructor: 'Sarah Johnson',
     badge: 'Popular'
   },
   {
     id: '3',
-    title: 'Machine Learning with Python',
-    description: 'Learn ML algorithms, data preprocessing, and model building with Python and scikit-learn.',
-    price: 95,
-    originalPrice: 180,
-    duration: '50 hours',
+    title: 'Java Full Stack Development',
+    description: 'Complete Java ecosystem: Spring Boot, React, MySQL, REST APIs, and microservices architecture.',
+    price: 18500,
+    originalPrice: 25000,
+    duration: '60 hours',
     students: 12350,
     rating: 4.9,
     thumbnail: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400',
@@ -103,8 +103,8 @@ export default function PopularCourses() {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold text-primary">${course.price}</span>
-                    <span className="text-sm line-through text-muted-foreground">${course.originalPrice}</span>
+                    <span className="text-2xl font-bold text-primary">₹{course.price.toLocaleString()}</span>
+                    <span className="text-sm line-through text-muted-foreground">₹{course.originalPrice.toLocaleString()}</span>
                   </div>
                   <Link to={`/course/${course.id}`}>
                     <Button size="sm">

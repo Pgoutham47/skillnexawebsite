@@ -99,7 +99,7 @@ export default function Blog() {
         {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">
-            <span className="text-primary">EduPlatform</span> Blog
+            <span className="text-primary">Skillnexa</span> Blog
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Stay updated with the latest insights, tips, and trends in online education and technology

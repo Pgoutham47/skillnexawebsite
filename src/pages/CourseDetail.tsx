@@ -25,8 +25,8 @@ const sampleCourse = {
   id: '1',
   title: 'Complete Web Development Bootcamp',
   description: 'Master modern web development with HTML5, CSS3, JavaScript ES6+, React, Node.js, and MongoDB. Build real-world projects and get job-ready skills.',
-  price: 89,
-  originalPrice: 149,
+  price: 18500,
+  originalPrice: 25000,
   duration: '40 hours',
   students: 15420,
   rating: 4.8,
@@ -289,8 +289,8 @@ export default function CourseDetail() {
                 {/* Pricing */}
                 <div className="text-center">
                   <div className="flex items-baseline justify-center gap-2 mb-2">
-                    <span className="text-3xl font-bold text-primary">${sampleCourse.price}</span>
-                    <span className="text-lg text-muted-foreground line-through">${sampleCourse.originalPrice}</span>
+                    <span className="text-3xl font-bold text-primary">₹{sampleCourse.price.toLocaleString('en-IN')}</span>
+                    <span className="text-lg text-muted-foreground line-through">₹{sampleCourse.originalPrice.toLocaleString('en-IN')}</span>
                   </div>
                   <Badge variant="destructive" className="text-sm">
                     40% OFF - Limited Time
@@ -326,7 +326,7 @@ export default function CourseDetail() {
                 <div className="pt-4 border-t text-center text-sm text-muted-foreground">
                   <p>Need help? Contact our support team</p>
                   <Button variant="link" size="sm" className="text-primary p-0 h-auto">
-                    support@eduplatform.com
+                    support@skillnexa.com
                   </Button>
                 </div>
               </CardContent>

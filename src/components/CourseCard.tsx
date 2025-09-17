@@ -77,9 +77,9 @@ export default function CourseCard({
       <CardFooter className="px-6 pb-6 pt-0">
         <div className="flex items-center justify-between w-full">
           <div className="text-2xl font-bold text-primary">
-            ${price}
+            ₹{price.toLocaleString('en-IN')}
           </div>
-          <Button size="sm">
+          <Button size="sm" className="w-full sm:w-auto">
             Enroll Now
           </Button>
         </div>

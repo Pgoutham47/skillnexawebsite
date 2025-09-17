@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Upload, DollarSign, Users, TrendingUp, CheckCircle } from 'lucide-react';
+import { Upload, DollarSign, Users, TrendingUp, CheckCircle, Award, Shield, RefreshCw, Star } from 'lucide-react';
 
 const benefits = [
   {
@@ -194,7 +194,7 @@ export default function Instructor() {
                       </div>
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
+                    <Button type="submit" size="lg" className="w-full text-sm sm:text-base">
                       Submit Application
                     </Button>
 
@@ -208,25 +208,138 @@ export default function Instructor() {
           </div>
         </section>
 
-        {/* Process Steps */}
+        {/* How to Become an Instructor */}
         <section className="container px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How It Works</h2>
+            <h2 className="text-3xl font-bold mb-4">How to Become an Instructor</h2>
             <p className="text-muted-foreground">
-              Simple steps to start your teaching journey
+              Follow our comprehensive guide to start your teaching journey
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {steps.map((step, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold">
-                  {step.number}
+          <div className="max-w-4xl mx-auto space-y-12">
+            {/* Step 1 */}
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xl font-bold">
+                    1
+                  </div>
+                  <h3 className="text-2xl font-bold">Meet Our Requirements</h3>
                 </div>
-                <h3 className="text-xl font-semibold">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
+                <div className="space-y-3 pl-15">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold">Professional Experience</h4>
+                      <p className="text-muted-foreground text-sm">Minimum 3+ years of hands-on experience in your field</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold">Industry Recognition</h4>
+                      <p className="text-muted-foreground text-sm">Portfolio, certifications, or professional achievements</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold">Teaching Passion</h4>
+                      <p className="text-muted-foreground text-sm">Genuine desire to help others learn and grow</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold">Communication Skills</h4>
+                      <p className="text-muted-foreground text-sm">Ability to explain complex concepts clearly</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"
+                  alt="Professional requirements"
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Instructor Benefits */}
+        <section className="bg-surface py-16">
+          <div className="container px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Instructor Benefits</h2>
+              <p className="text-muted-foreground">
+                Join our community and enjoy these exclusive benefits
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <DollarSign className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Competitive Revenue Share</h3>
+                  <p className="text-muted-foreground">Earn up to 70% revenue share from your course sales</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Users className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Global Student Reach</h3>
+                  <p className="text-muted-foreground">Access to our worldwide community of 50,000+ students</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <TrendingUp className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Marketing Support</h3>
+                  <p className="text-muted-foreground">Dedicated marketing team to promote your courses</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Award className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Professional Development</h3>
+                  <p className="text-muted-foreground">Free access to instructor training and development programs</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Shield className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Payment Protection</h3>
+                  <p className="text-muted-foreground">Secure and timely payments with fraud protection</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center">
+                <CardContent className="p-6">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <RefreshCw className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Ongoing Support</h3>
+                  <p className="text-muted-foreground">Dedicated instructor success manager for guidance</p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
 
@@ -237,7 +350,7 @@ export default function Instructor() {
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               Join our community of expert instructors and start making an impact today
             </p>
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
+            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto text-sm sm:text-base">
               Get Started Now
             </Button>
           </div>

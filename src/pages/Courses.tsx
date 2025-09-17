@@ -14,55 +14,55 @@ const sampleCourses = [
     id: '1',
     title: 'Complete Web Development Bootcamp',
     description: 'Learn HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build real projects and get job-ready.',
-    price: 89,
+    price: 18500,
     duration: '40 hours',
     students: 15420,
     rating: 4.8,
     category: 'Web',
-    thumbnail: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400',
+    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400',
     instructor: 'John Smith'
   },
   {
     id: '2', 
     title: 'Docker & Kubernetes Mastery',
     description: 'Master containerization and orchestration with Docker and Kubernetes for modern DevOps.',
-    price: 75,
+    price: 18500,
     duration: '25 hours',
     students: 8930,
     rating: 4.7,
     category: 'DevOps',
-    thumbnail: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=400',
+    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400',
     instructor: 'Sarah Johnson'
   },
   {
     id: '3',
     title: 'Machine Learning with Python',
     description: 'Learn ML algorithms, data preprocessing, and model building with Python and scikit-learn.',
-    price: 95,
+    price: 18500,
     duration: '50 hours',
     students: 12350,
     rating: 4.9,
     category: 'ML',
-    thumbnail: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400',
+    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400',
     instructor: 'Dr. Michael Chen'
   },
   {
     id: '4',
     title: 'Ethical Hacking & Penetration Testing',
     description: 'Learn cybersecurity fundamentals, penetration testing, and ethical hacking techniques.',
-    price: 110,
+    price: 18500,
     duration: '35 hours',
     students: 6720,
     rating: 4.6,
     category: 'Cybersec',
-    thumbnail: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400',
+    thumbnail: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400',
     instructor: 'Alex Rodriguez'
   },
   {
     id: '5',
     title: 'React Advanced Patterns',
     description: 'Deep dive into React hooks, context, performance optimization, and advanced patterns.',
-    price: 65,
+    price: 18500,
     duration: '20 hours',
     students: 9840,
     rating: 4.8,
@@ -74,12 +74,12 @@ const sampleCourses = [
     id: '6',
     title: 'CI/CD Pipeline Automation',
     description: 'Build robust CI/CD pipelines with Jenkins, GitHub Actions, and automated testing.',
-    price: 80,
+    price: 18500,
     duration: '30 hours',
     students: 7250,
     rating: 4.7,
     category: 'DevOps',
-    thumbnail: 'https://images.unsplash.com/photo-1618477247222-acbdb0e159b3?w=400',
+    thumbnail: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400',
     instructor: 'David Wilson'
   }
 ];
@@ -124,7 +124,7 @@ export default function Courses() {
                 variant={selectedCategory === category ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(category)}
-                className="min-w-[80px]"
+                className="min-w-[80px] text-xs sm:text-sm"
               >
                 {category}
               </Button>

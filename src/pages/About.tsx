@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Award, BookOpen, TrendingUp } from 'lucide-react';
+import { Users, Award, BookOpen, TrendingUp, Star, Shield, Zap, Globe, Target, Heart } from 'lucide-react';
 
 const stats = [
   {
@@ -68,7 +68,7 @@ export default function About() {
         <section className="container px-4 py-16 md:py-24">
           <div className="text-center max-w-3xl mx-auto">
             <Badge variant="secondary" className="text-primary font-medium mb-4">
-              About EduPlatform
+              About SKILLneXa
             </Badge>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -129,7 +129,7 @@ export default function About() {
                   Transforming Lives Through Education
                 </h3>
                 <p className="text-muted-foreground">
-                  We started EduPlatform with a simple belief: quality education should be 
+                  We started SKILLneXa with a simple belief: quality education should be 
                   accessible to everyone. Our platform connects passionate learners with 
                   industry-leading instructors to create transformative learning experiences.
                 </p>
@@ -152,36 +152,208 @@ export default function About() {
           </div>
         </section>
 
-        {/* Team Section */}
+        {/* What Makes Us Special */}
+        <section className="container px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">What Makes SKILLneXa Special</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Discover the unique features and values that set us apart in the online education landscape
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Star className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Industry Expert Instructors</h3>
+                <p className="text-muted-foreground">
+                  Learn from professionals who are actively working in top tech companies and have real-world experience to share.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Zap className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Hands-On Learning</h3>
+                <p className="text-muted-foreground">
+                  Every course includes practical projects, real-world case studies, and interactive coding sessions.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Job Placement Support</h3>
+                <p className="text-muted-foreground">
+                  Get career guidance, resume reviews, interview preparation, and direct connections to hiring partners.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Globe className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Global Community</h3>
+                <p className="text-muted-foreground">
+                  Connect with learners from 50+ countries, participate in global hackathons, and build international networks.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Target className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Personalized Learning Paths</h3>
+                <p className="text-muted-foreground">
+                  AI-powered recommendations help you choose the right courses based on your goals and skill level.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <Heart className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Student Success Focus</h3>
+                <p className="text-muted-foreground">
+                  Our dedicated success team provides 24/7 support, study groups, and mentorship programs.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Our Values */}
         <section className="bg-surface py-16">
           <div className="container px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Passionate educators and technologists working together to revolutionize online learning
+              <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
+              <p className="text-muted-foreground">
+                The principles that guide everything we do at SKILLneXa
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <Card key={index} className="text-center">
-                  <CardContent className="p-6">
-                    <div className="relative mb-4">
-                      <img 
-                        src={member.image}
-                        alt={member.name}
-                        className="w-24 h-24 rounded-full mx-auto object-cover"
-                      />
-                    </div>
-                    <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
-                    <div className="text-primary font-medium mb-2">{member.role}</div>
-                    <p className="text-sm text-muted-foreground">
-                      {member.description}
+
+            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Star className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Excellence in Education</h3>
+                    <p className="text-muted-foreground">
+                      We maintain the highest standards in curriculum design, instructor selection, and course delivery to ensure exceptional learning experiences.
                     </p>
-                  </CardContent>
-                </Card>
-              ))}
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Accessibility for All</h3>
+                    <p className="text-muted-foreground">
+                      We believe quality education should be accessible to everyone, regardless of their background, location, or financial situation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Innovation & Growth</h3>
+                    <p className="text-muted-foreground">
+                      We continuously evolve our platform and curriculum to stay ahead of industry trends and provide cutting-edge learning experiences.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Student-Centric Approach</h3>
+                    <p className="text-muted-foreground">
+                      Every decision we make is centered around student success, from course design to support services and career guidance.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Integrity & Trust</h3>
+                    <p className="text-muted-foreground">
+                      We build trust through transparency, honest communication, and delivering on our promises to students and instructors.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Community Building</h3>
+                    <p className="text-muted-foreground">
+                      We foster a supportive learning community where students, instructors, and alumni collaborate and grow together.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="container px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Passionate educators and technologists working together to revolutionize online learning
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="relative mb-4">
+                    <img 
+                      src={member.image}
+                      alt={member.name}
+                      className="w-24 h-24 rounded-full mx-auto object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-1">{member.name}</h3>
+                  <div className="text-primary font-medium mb-2">{member.role}</div>
+                  <p className="text-sm text-muted-foreground">
+                    {member.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
       </main>

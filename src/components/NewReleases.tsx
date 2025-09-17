@@ -10,7 +10,7 @@ const newCourses = [
     id: '7',
     title: 'React Native Mobile Development',
     description: 'Build cross-platform mobile apps with React Native and Expo.',
-    price: 99,
+    price: 18500,
     duration: '35 hours',
     students: 2340,
     rating: 4.9,
@@ -22,7 +22,7 @@ const newCourses = [
     id: '8',
     title: 'Advanced AI & Machine Learning',
     description: 'Deep learning, neural networks, and AI model deployment.',
-    price: 129,
+    price: 18500,
     duration: '60 hours',
     students: 1850,
     rating: 4.8,
@@ -34,7 +34,7 @@ const newCourses = [
     id: '9',
     title: 'Blockchain & Cryptocurrency',
     description: 'Learn blockchain technology, smart contracts, and DeFi.',
-    price: 115,
+    price: 18500,
     duration: '45 hours',
     students: 3200,
     rating: 4.7,
@@ -46,7 +46,7 @@ const newCourses = [
     id: '10',
     title: 'Cloud Architecture & DevOps',
     description: 'AWS, Azure, Docker, Kubernetes, and microservices.',
-    price: 110,
+    price: 18500,
     duration: '40 hours',
     students: 2890,
     rating: 4.8,
@@ -107,7 +107,7 @@ export default function NewReleases() {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-primary">${course.price}</span>
+                  <span className="text-lg font-bold text-primary">₹{course.price.toLocaleString()}</span>
                   <Link to={`/course/${course.id}`}>
                     <Button size="sm" className="text-xs px-3 py-1">
                       Enroll

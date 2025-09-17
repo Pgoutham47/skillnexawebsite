@@ -12,7 +12,7 @@ export default function Footer() {
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/src/assets/skillnexa-logo.png" alt="SkillNexa" className="h-8" />
+              <img src="/src/assets/skillnexa-logo-new.svg" alt="SKILLneXa" className="h-8" />
             </div>
             <p className="text-muted-foreground">
               SkillNexa is a leading online learning platform that empowers students worldwide 

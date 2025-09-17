@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    content: 'support@eduplatform.com',
+    content: 'support@skillnexa.com',
     description: 'Send us an email anytime'
   },
   {
@@ -208,7 +208,7 @@ export default function Contact() {
                         />
                       </div>
 
-                      <Button type="submit" size="lg" className="w-full">
+                      <Button type="submit" size="lg" className="w-full text-sm sm:text-base">
                         Send Message
                       </Button>
 
@@ -269,7 +269,7 @@ export default function Contact() {
                     <p className="text-sm text-muted-foreground mb-4">
                       Check out our FAQ section for immediate answers to common questions
                     </p>
-                    <Button variant="outline">
+                    <Button variant="outline" className="w-full sm:w-auto">
                       Visit FAQ
                     </Button>
                   </CardContent>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* EdTech Design System - Modern Red & White Theme
+/* SKILLneXa Design System - Navy Blue & White Theme
 All colors MUST be HSL.
 */
 
@@ -12,10 +12,10 @@ All colors MUST be HSL.
     --background: 0 0% 100%;
     --foreground: 0 0% 13%;
     
-    /* EdTech Primary - Bold Red */
-    --primary: 0 60% 52%;
+    /* SKILLneXa Primary - Navy Blue */
+    --primary: 220 100% 25%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 0 60% 47%;
+    --primary-hover: 220 100% 20%;
     
     /* Secondary - Clean White/Gray */
     --secondary: 0 0% 100%;
@@ -32,22 +32,22 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
     
-    --accent: 0 60% 95%;
-    --accent-foreground: 0 60% 52%;
+    --accent: 220 100% 95%;
+    --accent-foreground: 220 100% 25%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     --border: 0 0% 91%;
     --input: 0 0% 91%;
-    --ring: 0 60% 52%;
+    --ring: 220 100% 25%;
     
     /* Design System Extensions */
     --surface: 0 0% 98%;
     --surface-hover: 0 0% 94%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(0 70% 45%));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(220 100% 20%));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--surface)));
     
     /* Shadows */
