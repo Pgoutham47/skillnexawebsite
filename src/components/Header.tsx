@@ -9,17 +9,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { trendingCourses } from '@/lib/trending';
 
-const categories = [
-  'Coaching',
-  'Online Business', 
-  'Passive Income',
-  'Photography',
-  'Teacher Training',
-  'Teaching Online',
-  'Technology',
-  'Video Creation'
-];
+const categories = trendingCourses.map((c) => c.title);
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +24,7 @@ export default function Header() {
         {/* Logo and Categories */}
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/src/assets/skillnexa-logo-new.svg" alt="SKILLneXa" className="h-8" />
+            <img src="/logo.svg" alt="SKILLneXa" className="h-8" />
           </Link>
           
           <DropdownMenu>
@@ -41,11 +33,11 @@ export default function Header() {
                 Categories <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-48">
-              {categories.map((category) => (
-                <DropdownMenuItem key={category} asChild>
-                  <Link to={`/courses?category=${category.toLowerCase().replace(' ', '-')}`}>
-                    {category}
+            <DropdownMenuContent align="start" className="w-64">
+              {trendingCourses.map((course) => (
+                <DropdownMenuItem key={course.id} asChild>
+                  <Link to={`/courses?search=${encodeURIComponent(course.title)}`}>
+                    {course.title}
                   </Link>
                 </DropdownMenuItem>
               ))}

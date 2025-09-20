@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Users, Award, Video, GraduationCap } from 'lucide-react';
@@ -55,9 +56,11 @@ export default function HeroSection() {
               <Button size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
                 Create Your Free Account
               </Button>
-              <Button variant="outline" size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
-                View Courses
-              </Button>
+              <Link to="/courses">
+                <Button variant="outline" size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto">
+                  View Courses
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Indicators */}

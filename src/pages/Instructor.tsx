@@ -73,7 +73,7 @@ export default function Instructor() {
       <main>
         {/* Hero Section */}
         <section className="container px-4 py-16 md:py-24">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-16 animate-[fadeInUp_0.6s_ease_both]">
             <Badge variant="secondary" className="text-primary font-medium mb-4">
               Become an Instructor
             </Badge>
@@ -92,9 +92,9 @@ export default function Instructor() {
           {/* Benefits Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_both]" style={{animationDelay: `${index*120}ms`}}>
                 <CardContent className="p-6">
-                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <benefit.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
@@ -258,11 +258,11 @@ export default function Instructor() {
                   </div>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative group transition-transform">
                 <img 
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"
                   alt="Professional requirements"
-                  className="rounded-lg shadow-xl w-full"
+                  className="rounded-lg shadow-xl w-full group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </div>
@@ -280,7 +280,7 @@ export default function Instructor() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="text-center">
+              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
                 <CardContent className="p-6">
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <DollarSign className="w-8 h-8 text-primary" />
@@ -290,7 +290,7 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
                 <CardContent className="p-6">
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Users className="w-8 h-8 text-primary" />
@@ -300,7 +300,7 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
                 <CardContent className="p-6">
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <TrendingUp className="w-8 h-8 text-primary" />
@@ -310,7 +310,7 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
                 <CardContent className="p-6">
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Award className="w-8 h-8 text-primary" />
@@ -320,7 +320,7 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
                 <CardContent className="p-6">
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Shield className="w-8 h-8 text-primary" />
@@ -330,7 +330,7 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center">
+              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
                 <CardContent className="p-6">
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <RefreshCw className="w-8 h-8 text-primary" />

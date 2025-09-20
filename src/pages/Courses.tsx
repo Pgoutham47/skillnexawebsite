@@ -1,92 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CourseCard from '@/components/CourseCard';
+import { trendingCourses } from '@/lib/trending';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
 
-const categories = ['All', 'Web', 'DevOps', 'ML', 'Cybersec'];
+const categories = ['All', 'Web', 'DevOps', 'ML', 'Cybersec', 'Data', 'Cloud'];
 
-const sampleCourses = [
-  {
-    id: '1',
-    title: 'Complete Web Development Bootcamp',
-    description: 'Learn HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build real projects and get job-ready.',
-    price: 18500,
-    duration: '40 hours',
-    students: 15420,
-    rating: 4.8,
-    category: 'Web',
-    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400',
-    instructor: 'John Smith'
-  },
-  {
-    id: '2', 
-    title: 'Docker & Kubernetes Mastery',
-    description: 'Master containerization and orchestration with Docker and Kubernetes for modern DevOps.',
-    price: 18500,
-    duration: '25 hours',
-    students: 8930,
-    rating: 4.7,
-    category: 'DevOps',
-    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400',
-    instructor: 'Sarah Johnson'
-  },
-  {
-    id: '3',
-    title: 'Machine Learning with Python',
-    description: 'Learn ML algorithms, data preprocessing, and model building with Python and scikit-learn.',
-    price: 18500,
-    duration: '50 hours',
-    students: 12350,
-    rating: 4.9,
-    category: 'ML',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400',
-    instructor: 'Dr. Michael Chen'
-  },
-  {
-    id: '4',
-    title: 'Ethical Hacking & Penetration Testing',
-    description: 'Learn cybersecurity fundamentals, penetration testing, and ethical hacking techniques.',
-    price: 18500,
-    duration: '35 hours',
-    students: 6720,
-    rating: 4.6,
-    category: 'Cybersec',
-    thumbnail: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400',
-    instructor: 'Alex Rodriguez'
-  },
-  {
-    id: '5',
-    title: 'React Advanced Patterns',
-    description: 'Deep dive into React hooks, context, performance optimization, and advanced patterns.',
-    price: 18500,
-    duration: '20 hours',
-    students: 9840,
-    rating: 4.8,
-    category: 'Web',
-    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400',
-    instructor: 'Emily Davis'
-  },
-  {
-    id: '6',
-    title: 'CI/CD Pipeline Automation',
-    description: 'Build robust CI/CD pipelines with Jenkins, GitHub Actions, and automated testing.',
-    price: 18500,
-    duration: '30 hours',
-    students: 7250,
-    rating: 4.7,
-    category: 'DevOps',
-    thumbnail: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400',
-    instructor: 'David Wilson'
-  }
-];
+// Use the shared trending courses dataset (exactly 9)
+const sampleCourses = trendingCourses;
 
 export default function Courses() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const search = params.get('search');
+    const category = params.get('category');
+    if (search) setSearchQuery(search);
+    if (category) setSelectedCategory(category);
+  }, [location.search]);
 
   const filteredCourses = sampleCourses.filter(course => {
     const matchesCategory = selectedCategory === 'All' || course.category === selectedCategory;
@@ -139,9 +78,9 @@ export default function Courses() {
           </p>
         </div>
 
-        {/* Course Grid */}
+        {/* Course Grid - show exactly 9 trending courses */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCourses.map((course) => (
+          {filteredCourses.slice(0, 9).map((course) => (
             <CourseCard key={course.id} {...course} />
           ))}
         </div>

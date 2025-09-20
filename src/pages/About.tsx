@@ -153,18 +153,20 @@ export default function About() {
         </section>
 
         {/* What Makes Us Special */}
-        <section className="container px-4 py-16">
+        <section className="relative py-16">
+          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/20 via-accent/10 to-transparent" />
+          <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">What Makes SKILLneXa Special</h2>
+            <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">What Makes SKILLneXa Special</span></h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               Discover the unique features and values that set us apart in the online education landscape
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_0s_both] bg-white/85 backdrop-blur rounded-xl">
               <CardContent className="p-6">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 ring-4 ring-primary/10">
                   <Star className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Industry Expert Instructors</h3>
@@ -174,9 +176,9 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_0.15s_both] bg-white/85 backdrop-blur rounded-xl">
               <CardContent className="p-6">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 ring-4 ring-primary/10">
                   <Zap className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Hands-On Learning</h3>
@@ -186,9 +188,9 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_0.3s_both] bg-white/85 backdrop-blur rounded-xl">
               <CardContent className="p-6">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 ring-4 ring-primary/10">
                   <Shield className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Job Placement Support</h3>
@@ -198,9 +200,9 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_0.45s_both] bg-white/85 backdrop-blur rounded-xl">
               <CardContent className="p-6">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 ring-4 ring-primary/10">
                   <Globe className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Global Community</h3>
@@ -210,9 +212,9 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_0.6s_both] bg-white/85 backdrop-blur rounded-xl">
               <CardContent className="p-6">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 ring-4 ring-primary/10">
                   <Target className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Personalized Learning Paths</h3>
@@ -222,9 +224,9 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card className="text-center hover:shadow-lg transition-shadow">
+            <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_0.75s_both] bg-white/85 backdrop-blur rounded-xl">
               <CardContent className="p-6">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 ring-4 ring-primary/10">
                   <Heart className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Student Success Focus</h3>
@@ -233,6 +235,7 @@ export default function About() {
                 </p>
               </CardContent>
             </Card>
+          </div>
           </div>
         </section>
 
