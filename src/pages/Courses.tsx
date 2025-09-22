@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Search } from 'lucide-react';
 
-const categories = ['All', 'Web', 'DevOps', 'ML', 'Cybersec', 'Data', 'Cloud'];
+const categories = ['All', 'AI/ML', 'Cybersecurity', 'Prompt Engineering', 'Data Science', 'Self Employment', 'Self Employment with AI', 'Digital Marketing with AI', 'GenAI & Multi-Agent Systems'];
 
 // Use the shared trending courses dataset (exactly 9)
 const sampleCourses = trendingCourses;
@@ -78,9 +78,9 @@ export default function Courses() {
           </p>
         </div>
 
-        {/* Course Grid - show exactly 9 trending courses */}
+        {/* Course Grid - show all filtered courses */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCourses.slice(0, 9).map((course) => (
+          {filteredCourses.map((course) => (
             <CourseCard key={course.id} {...course} />
           ))}
         </div>

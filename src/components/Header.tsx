@@ -9,9 +9,17 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { trendingCourses } from '@/lib/trending';
-
-const categories = trendingCourses.map((c) => c.title);
+// Main course categories (8 main courses)
+const mainCategories = [
+  { name: 'AI/ML', link: '/courses?category=AI/ML' },
+  { name: 'Cybersecurity', link: '/courses?category=Cybersecurity' },
+  { name: 'Prompt Engineering', link: '/courses?category=Prompt Engineering' },
+  { name: 'Data Science', link: '/courses?category=Data Science' },
+  { name: 'Self Employment', link: '/courses?category=Self Employment' },
+  { name: 'Self Employment with AI', link: '/courses?category=Self Employment with AI' },
+  { name: 'Digital Marketing with AI', link: '/courses?category=Digital Marketing with AI' },
+  { name: 'GenAI & Multi-Agent Systems', link: '/courses?category=GenAI & Multi-Agent Systems' }
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,10 +42,10 @@ export default function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-64">
-              {trendingCourses.map((course) => (
-                <DropdownMenuItem key={course.id} asChild>
-                  <Link to={`/courses?search=${encodeURIComponent(course.title)}`}>
-                    {course.title}
+              {mainCategories.map((category) => (
+                <DropdownMenuItem key={category.name} asChild>
+                  <Link to={category.link}>
+                    {category.name}
                   </Link>
                 </DropdownMenuItem>
               ))}

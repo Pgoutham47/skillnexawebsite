@@ -206,13 +206,13 @@ export default function Blog() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {regularPosts.map((post) => (
-              <Card key={post.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Card key={post.id} className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-4 hover:scale-110 border-border relative overflow-hidden">
                 <CardHeader className="p-0">
                   <div className="relative overflow-hidden rounded-t-lg">
                     <img 
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-cover group-hover:scale-125 transition-transform duration-700 ease-out"
                     />
                   </div>
                 </CardHeader>
@@ -220,35 +220,35 @@ export default function Blog() {
                 <CardContent className="p-6 space-y-4">
                   <div className="flex flex-wrap gap-2">
                     {post.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
+                      <Badge key={tag} variant="secondary" className="text-xs group-hover:scale-125 group-hover:rotate-3 transition-all duration-500">
                         {tag}
                       </Badge>
                     ))}
                   </div>
                   
-                  <h3 className="font-semibold text-lg leading-tight group-hover:text-primary transition-colors">
+                  <h3 className="font-semibold text-lg leading-tight group-hover:text-primary group-hover:scale-105 transition-all duration-500">
                     {post.title}
                   </h3>
                   
-                  <p className="text-muted-foreground text-sm line-clamp-3">
+                  <p className="text-muted-foreground text-sm line-clamp-3 group-hover:text-foreground transition-colors duration-500">
                     {post.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <User className="w-3 h-3" />
+                      <div className="flex items-center gap-1 group-hover:text-primary group-hover:scale-110 transition-all duration-500">
+                        <User className="w-3 h-3 group-hover:rotate-180 transition-transform duration-500" />
                         <span>{post.author}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
+                      <div className="flex items-center gap-1 group-hover:text-primary group-hover:scale-110 transition-all duration-500">
+                        <Calendar className="w-3 h-3 group-hover:rotate-180 transition-transform duration-500" />
                         <span>{new Date(post.date).toLocaleDateString()}</span>
                       </div>
                     </div>
-                    <span>{post.readTime}</span>
+                    <span className="group-hover:text-primary group-hover:scale-110 transition-all duration-500">{post.readTime}</span>
                   </div>
                   
-                  <Button variant="outline" size="sm" className="w-full group">
+                  <Button variant="outline" size="sm" className="w-full group hover:scale-110 hover:shadow-lg transition-all duration-300">
                     Read Article
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>

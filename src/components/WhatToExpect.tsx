@@ -87,13 +87,13 @@ export default function WhatToExpect() {
           </div>
           <div className="lg:col-span-2 order-1 lg:order-2 grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="feature-card text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 opacity-0 translate-y-8">
+            <Card key={index} className="feature-card text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60 opacity-0 translate-y-8">
               <CardContent className="p-6">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center shadow">
-                  <feature.icon className="h-8 w-8 text-primary" />
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center shadow group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <feature.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-primary group-hover:scale-105 transition-all duration-500">{feature.title}</h3>
+                <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -107,10 +107,10 @@ export default function WhatToExpect() {
               Join over 50,000 students who have already transformed their careers with SkillNexa
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-primary to-primary/90 text-white px-8 py-3 rounded-lg shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 transition-all">
+              <button className="bg-gradient-to-r from-primary to-primary/90 text-white px-8 py-3 rounded-lg shadow-md shadow-primary/30 hover:shadow-xl hover:shadow-primary/50 hover:brightness-125 hover:scale-110 transition-all duration-300">
                 Start Learning Today
               </button>
-              <button className="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/5 transition-colors">
+              <button className="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary/5 hover:scale-110 hover:shadow-lg transition-all duration-300">
                 Explore Courses
               </button>
             </div>

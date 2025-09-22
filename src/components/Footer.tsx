@@ -74,28 +74,43 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Categories</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/courses?category=web" className="text-muted-foreground hover:text-primary transition-colors">
-                  Web Development
+                <Link to="/courses?category=AI/ML" className="text-muted-foreground hover:text-primary transition-colors">
+                  AI/ML
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=devops" className="text-muted-foreground hover:text-primary transition-colors">
-                  DevOps
-                </Link>
-              </li>
-              <li>
-                <Link to="/courses?category=ml" className="text-muted-foreground hover:text-primary transition-colors">
-                  Machine Learning
-                </Link>
-              </li>
-              <li>
-                <Link to="/courses?category=cybersec" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Cybersecurity" className="text-muted-foreground hover:text-primary transition-colors">
                   Cybersecurity
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=marketing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Digital Marketing
+                <Link to="/courses?category=Prompt Engineering" className="text-muted-foreground hover:text-primary transition-colors">
+                  Prompt Engineering
+                </Link>
+              </li>
+              <li>
+                <Link to="/courses?category=Data Science" className="text-muted-foreground hover:text-primary transition-colors">
+                  Data Science
+                </Link>
+              </li>
+              <li>
+                <Link to="/courses?category=Self Employment" className="text-muted-foreground hover:text-primary transition-colors">
+                  Self Employment
+                </Link>
+              </li>
+              <li>
+                <Link to="/courses?category=Self Employment with AI" className="text-muted-foreground hover:text-primary transition-colors">
+                  Self Employment with AI
+                </Link>
+              </li>
+              <li>
+                <Link to="/courses?category=Digital Marketing with AI" className="text-muted-foreground hover:text-primary transition-colors">
+                  Digital Marketing with AI
+                </Link>
+              </li>
+              <li>
+                <Link to="/courses?category=GenAI & Multi-Agent Systems" className="text-muted-foreground hover:text-primary transition-colors">
+                  GenAI & Multi-Agent Systems
                 </Link>
               </li>
             </ul>

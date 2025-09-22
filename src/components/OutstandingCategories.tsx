@@ -1,36 +1,72 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import { Code, TrendingUp, Shield, Cpu } from 'lucide-react';
+import { Brain, Shield, MessageSquare, BarChart3, Briefcase, TrendingUp, Bot, Users } from 'lucide-react';
 
 const categories = [
   {
-    title: 'Development',
-    icon: Code,
-    description: 'Master coding skills from web development to mobile apps',
-    courses: 120,
-    gradient: 'from-blue-500 to-purple-600'
+    title: 'AI/ML',
+    icon: Brain,
+    description: 'Master artificial intelligence and machine learning from foundations to advanced applications',
+    courses: 3,
+    gradient: 'from-blue-500 to-purple-600',
+    link: '/courses?category=AI/ML'
   },
   {
-    title: 'Digital Marketing',
-    icon: TrendingUp,
-    description: 'Learn SEO, social media, and growth marketing strategies',
-    courses: 85,
-    gradient: 'from-green-500 to-teal-600'
-  },
-  {
-    title: 'Hacking',
+    title: 'Cybersecurity',
     icon: Shield,
-    description: 'Ethical hacking and cybersecurity fundamentals',
-    courses: 45,
-    gradient: 'from-red-500 to-pink-600'
+    description: 'Learn ethical hacking, digital forensics, and advanced security techniques',
+    courses: 3,
+    gradient: 'from-red-500 to-pink-600',
+    link: '/courses?category=Cybersecurity'
   },
   {
-    title: 'Technology',
-    icon: Cpu,
-    description: 'Cloud computing, AI, and emerging tech trends',
-    courses: 95,
-    gradient: 'from-orange-500 to-yellow-600'
+    title: 'Prompt Engineering',
+    icon: MessageSquare,
+    description: 'Master the art of prompt engineering and AI agent development',
+    courses: 3,
+    gradient: 'from-green-500 to-teal-600',
+    link: '/courses?category=Prompt Engineering'
+  },
+  {
+    title: 'Data Science',
+    icon: BarChart3,
+    description: 'Build expertise in data analysis, machine learning, and big data technologies',
+    courses: 3,
+    gradient: 'from-orange-500 to-yellow-600',
+    link: '/courses?category=Data Science'
+  },
+  {
+    title: 'Self Employment',
+    icon: Briefcase,
+    description: 'Learn freelancing, entrepreneurship, and building successful businesses',
+    courses: 3,
+    gradient: 'from-indigo-500 to-blue-600',
+    link: '/courses?category=Self Employment'
+  },
+  {
+    title: 'Self Employment with AI',
+    icon: TrendingUp,
+    description: 'Leverage AI tools for freelancing and building AI-powered businesses',
+    courses: 3,
+    gradient: 'from-purple-500 to-pink-600',
+    link: '/courses?category=Self Employment with AI'
+  },
+  {
+    title: 'Digital Marketing with AI',
+    icon: Bot,
+    description: 'Master AI-powered digital marketing strategies and automation',
+    courses: 3,
+    gradient: 'from-cyan-500 to-blue-600',
+    link: '/courses?category=Digital Marketing with AI'
+  },
+  {
+    title: 'GenAI & Multi-Agent Systems',
+    icon: Users,
+    description: 'Build advanced generative AI applications and multi-agent systems',
+    courses: 3,
+    gradient: 'from-emerald-500 to-teal-600',
+    link: '/courses?category=GenAI & Multi-Agent Systems'
   }
 ];
 
@@ -52,23 +88,23 @@ export default function OutstandingCategories() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {categories.map((category, index) => (
-            <Link key={category.title} to={`/courses?category=${category.title.toLowerCase()}`}>
-              <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2 cursor-pointer border-border/60 backdrop-blur-sm bg-white/80">
+            <Link key={category.title} to={category.link}>
+              <Card className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 cursor-pointer border-border/60 backdrop-blur-sm bg-white/80 relative overflow-hidden">
                 <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                    <category.icon className="h-8 w-8 text-white" />
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.gradient} flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg relative overflow-hidden`}>
+                    <category.icon className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">
                     {category.title}
                   </h3>
                   
-                  <p className="text-muted-foreground text-sm mb-4">
+                  <p className="text-muted-foreground text-sm mb-4 group-hover:text-foreground transition-colors duration-500">
                     {category.description}
                   </p>
                   
-                  <div className="text-xs text-muted-foreground">
-                    {category.courses} courses available
+                  <div className="text-xs text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all duration-500">
+                    {category.courses} levels available
                   </div>
                 </CardContent>
               </Card>

@@ -258,11 +258,11 @@ export default function Instructor() {
                   </div>
                 </div>
               </div>
-              <div className="relative group transition-transform">
+              <div className="relative group transition-transform hover:scale-105">
                 <img 
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600"
                   alt="Professional requirements"
-                  className="rounded-lg shadow-xl w-full group-hover:scale-[1.02] transition-transform duration-500"
+                  className="rounded-lg shadow-xl w-full group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -280,63 +280,63 @@ export default function Instructor() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <DollarSign className="w-8 h-8 text-primary" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <DollarSign className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Competitive Revenue Share</h3>
-                  <p className="text-muted-foreground">Earn up to 70% revenue share from your course sales</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Competitive Revenue Share</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">Earn up to 70% revenue share from your course sales</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Users className="w-8 h-8 text-primary" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <Users className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Global Student Reach</h3>
-                  <p className="text-muted-foreground">Access to our worldwide community of 50,000+ students</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Global Student Reach</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">Access to our worldwide community of 50,000+ students</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <TrendingUp className="w-8 h-8 text-primary" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <TrendingUp className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Marketing Support</h3>
-                  <p className="text-muted-foreground">Dedicated marketing team to promote your courses</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Marketing Support</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">Dedicated marketing team to promote your courses</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Award className="w-8 h-8 text-primary" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <Award className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Professional Development</h3>
-                  <p className="text-muted-foreground">Free access to instructor training and development programs</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Professional Development</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">Free access to instructor training and development programs</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Shield className="w-8 h-8 text-primary" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <Shield className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Payment Protection</h3>
-                  <p className="text-muted-foreground">Secure and timely payments with fraud protection</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Payment Protection</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">Secure and timely payments with fraud protection</p>
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <RefreshCw className="w-8 h-8 text-primary" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                    <RefreshCw className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">Ongoing Support</h3>
-                  <p className="text-muted-foreground">Dedicated instructor success manager for guidance</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Ongoing Support</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">Dedicated instructor success manager for guidance</p>
                 </CardContent>
               </Card>
             </div>
@@ -350,7 +350,7 @@ export default function Instructor() {
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               Join our community of expert instructors and start making an impact today
             </p>
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto text-sm sm:text-base">
+            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto text-sm sm:text-base hover:scale-110 hover:shadow-xl hover:shadow-white/50 hover:brightness-125 transition-all duration-300">
               Get Started Now
             </Button>
           </div>

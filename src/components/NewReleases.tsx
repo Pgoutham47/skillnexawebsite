@@ -7,51 +7,51 @@ import { Clock, Users, Star } from 'lucide-react';
 
 const newCourses = [
   {
-    id: '7',
-    title: 'React Native Mobile Development',
-    description: 'Build cross-platform mobile apps with React Native and Expo.',
+    id: 'ai-ml-3',
+    title: 'AI/ML Course - Level 3: Advanced (Specialization & Research)',
+    description: 'Move into cutting-edge AI, deployment, and specialization. Master transformers, LLMs, generative AI, NLP, computer vision, reinforcement learning, MLOps, and ethics in AI.',
     price: 18500,
-    duration: '35 hours',
-    students: 2340,
+    duration: '4-6 months',
+    students: 7200,
     rating: 4.9,
-    thumbnail: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400',
-    instructor: 'Alex Chen',
-    isNew: true
-  },
-  {
-    id: '8',
-    title: 'Advanced AI & Machine Learning',
-    description: 'Deep learning, neural networks, and AI model deployment.',
-    price: 18500,
-    duration: '60 hours',
-    students: 1850,
-    rating: 4.8,
     thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400',
-    instructor: 'Dr. Lisa Park',
+    instructor: 'Dr. Alex Kumar',
     isNew: true
   },
   {
-    id: '9',
-    title: 'Blockchain & Cryptocurrency',
-    description: 'Learn blockchain technology, smart contracts, and DeFi.',
+    id: 'genai-3',
+    title: 'GenAI & Multi-Agent Systems - Level 3: Advanced (Research, Scaling & Autonomous Systems)',
+    description: 'Develop advanced MAS applications, deploy systems, and explore research trends. Master advanced GenAI techniques, multi-agent reinforcement learning, and scalable architectures.',
     price: 18500,
-    duration: '45 hours',
-    students: 3200,
-    rating: 4.7,
-    thumbnail: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400',
-    instructor: 'Robert Kim',
+    duration: '12-16 weeks',
+    students: 8500,
+    rating: 4.9,
+    thumbnail: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400',
+    instructor: 'Dr. Priya Kapoor',
     isNew: true
   },
   {
-    id: '10',
-    title: 'Cloud Architecture & DevOps',
-    description: 'AWS, Azure, Docker, Kubernetes, and microservices.',
+    id: 'self-ai-3',
+    title: 'Self Employment with AI Trend - Level 3: Advanced (AI-Powered Entrepreneurship & Scaling)',
+    description: 'Scale freelancing into a startup, build AI-driven businesses, and monetize at scale. Master AI product development, scaling digital business, MLOps, and legal & business skills.',
     price: 18500,
-    duration: '40 hours',
-    students: 2890,
-    rating: 4.8,
-    thumbnail: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400',
-    instructor: 'Maria Rodriguez',
+    duration: '12-16 weeks',
+    students: 11200,
+    rating: 4.9,
+    thumbnail: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400',
+    instructor: 'Dr. Alex Thompson',
+    isNew: true
+  },
+  {
+    id: 'dm-ai-3',
+    title: 'Digital Marketing with AI - Level 3: Advanced (AI-Powered Growth Marketing & Strategy)',
+    description: 'Master AI-driven strategies, growth hacking, and scaling businesses. Learn advanced SEO/SEM with AI, growth marketing & funnels, e-commerce & AI marketing, and AI in branding & strategy.',
+    price: 18500,
+    duration: '12-16 weeks',
+    students: 9500,
+    rating: 4.9,
+    thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400',
+    instructor: 'Dr. Sarah Chen',
     isNew: true
   }
 ];
@@ -69,47 +69,50 @@ export default function NewReleases() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {newCourses.map((course) => (
-            <Card key={course.id} className="group hover:shadow-lg transition-shadow">
+            <Card key={course.id} className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border relative overflow-hidden">
               <div className="relative">
                 <img 
                   src={course.thumbnail} 
                   alt={course.title}
-                  className="w-full h-40 object-cover rounded-t-lg"
+                  className="w-full h-40 object-cover rounded-t-lg group-hover:scale-130 transition-transform duration-700 ease-out"
                 />
                 {course.isNew && (
-                  <Badge className="absolute top-3 left-3 bg-green-500 text-white">
+                  <Badge className="absolute top-3 left-3 bg-green-500 text-white group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                     New
                   </Badge>
                 )}
               </div>
               
               <CardHeader className="pb-2">
-                <CardTitle className="text-base line-clamp-2 group-hover:text-primary transition-colors">
+                <CardTitle className="text-base line-clamp-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">
                   {course.title}
                 </CardTitle>
-                <p className="text-xs text-muted-foreground">by {course.instructor}</p>
+                <p className="text-xs text-muted-foreground group-hover:text-primary transition-colors duration-500">by {course.instructor}</p>
               </CardHeader>
               
               <CardContent className="space-y-3">
-                <p className="text-xs text-muted-foreground line-clamp-2">
+                <p className="text-xs text-muted-foreground line-clamp-2 group-hover:text-foreground transition-colors duration-500">
                   {course.description}
                 </p>
                 
                 <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
+                  <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
+                    <Clock className="h-3 w-3 group-hover:rotate-180 transition-transform duration-500" />
                     {course.duration}
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                  <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
+                    <Star className="h-3 w-3 fill-yellow-400 text-yellow-400 group-hover:rotate-180 transition-transform duration-500" />
                     {course.rating}
                   </div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-primary">₹{course.price.toLocaleString()}</span>
+                  <span className="text-lg font-bold text-primary group-hover:scale-125 group-hover:text-secondary transition-all duration-500">₹{course.price.toLocaleString()}</span>
                   <Link to={`/course/${course.id}`}>
-                    <Button size="sm" className="text-xs px-3 py-1">
+                    <Button 
+                      size="sm" 
+                      className="text-xs px-3 py-1 hover:scale-110 hover:shadow-lg transition-all duration-300"
+                    >
                       Enroll
                     </Button>
                   </Link>
@@ -120,9 +123,11 @@ export default function NewReleases() {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg">
-            View All New Courses
-          </Button>
+          <Link to="/courses">
+            <Button variant="outline" size="lg">
+              View All New Courses
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
