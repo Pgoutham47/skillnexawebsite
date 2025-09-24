@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Users, Award, Video, GraduationCap } from 'lucide-react';
 import heroImage from '@/assets/hero-education.jpg';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 export default function HeroSection() {
   const trustBadges = [
@@ -41,14 +42,18 @@ export default function HeroSection() {
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight group">
-                Master New Skills{' '}
-                <span className="text-primary group-hover:scale-110 transition-transform duration-500 inline-block">Online</span>
+                <span className="text-primary group-hover:scale-110 transition-transform duration-500 inline-block">SkillNexa</span>:{' '}
+                Where learning meets limitless possibilities.
               </h1>
               
-              <p className="text-xl text-muted-foreground max-w-lg">
-                Join thousands of learners advancing their careers with expert-led courses, 
-                hands-on projects, and industry certifications.
-              </p>
+              <div className="text-xl text-muted-foreground max-w-2xl space-y-4">
+                <p>
+                  At SkillNexa, we believe that the future belongs to those who never stop learning. We are more than an edtech platform—we are a movement to transform knowledge into action, and ambition into achievement.
+                </p>
+                <p>
+                  Because at SkillNexa, it's not just about learning—it's about becoming the best version of yourself.
+                </p>
+              </div>
             </div>
 
             {/* CTA Buttons */}
@@ -56,7 +61,7 @@ export default function HeroSection() {
               <Button size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto hover:scale-110 hover:shadow-xl hover:shadow-primary/50 hover:brightness-125 transition-all duration-300">
                 Create Your Free Account
               </Button>
-              <Link to="/courses">
+              <Link to="/courses" onClick={scrollToTop}>
                 <Button variant="outline" size="lg" className="text-sm sm:text-lg px-6 sm:px-8 w-full sm:w-auto hover:scale-110 hover:shadow-lg transition-all duration-300">
                   View Courses
                 </Button>
@@ -66,8 +71,8 @@ export default function HeroSection() {
             {/* Trust Indicators */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8">
               {trustBadges.map((badge, index) => (
-                <div key={index} className="text-center space-y-2 group hover:scale-110 transition-all duration-500">
-                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                <div key={index} className="text-center space-y-2 group hover:scale-110 hover:rounded-lg hover:p-4 transition-all duration-500">
+                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <badge.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div>
@@ -93,14 +98,14 @@ export default function HeroSection() {
             {/* Floating Stats */}
             <div className="absolute -bottom-6 -left-6 bg-card border rounded-lg p-4 shadow-lg hover:scale-110 hover:rotate-3 transition-all duration-500">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary group-hover:scale-125 transition-transform duration-500">50K+</div>
+                <div className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-500">50K+</div>
                 <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-500">Happy Students</div>
               </div>
             </div>
             
             <div className="absolute -top-6 -right-6 bg-card border rounded-lg p-4 shadow-lg hover:scale-110 hover:-rotate-3 transition-all duration-500">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary group-hover:scale-125 transition-transform duration-500">95%</div>
+                <div className="text-2xl font-bold text-primary group-hover:scale-110 transition-transform duration-500">95%</div>
                 <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-500">Success Rate</div>
               </div>
             </div>

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Clock, Users, Star, ChevronDown, Play, CheckCircle, Award, BookOpen, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 interface CourseCardProps {
   id: string;
@@ -279,18 +280,18 @@ export default function CourseCard({
   const [expanded, setExpanded] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <Card className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-4 hover:scale-110 border-border relative overflow-hidden">
+    <Card className="group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden">
       <CardHeader className="p-0">
         <div className="relative overflow-hidden rounded-t-lg">
           <img 
             src={thumbnail} 
             alt={title}
-            className="w-full h-48 object-cover group-hover:scale-125 transition-transform duration-700 ease-out"
+            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
           />
-          <Badge className="absolute top-4 left-4 bg-primary shadow shadow-primary/40 group-hover:scale-125 group-hover:rotate-3 transition-all duration-500">
+          <Badge className="absolute top-4 left-4 bg-primary shadow shadow-primary/40 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
             {category}
           </Badge>
-          <div className="absolute top-4 right-4 flex items-center gap-1 bg-black/50 text-white px-2 py-1 rounded text-sm group-hover:scale-125 group-hover:bg-primary/80 transition-all duration-500">
+          <div className="absolute top-4 right-4 flex items-center gap-1 bg-black/50 text-white px-2 py-1 rounded text-sm group-hover:scale-110 group-hover:bg-primary/80 transition-all duration-500">
             <Star className="w-3 h-3 fill-current group-hover:rotate-180 transition-transform duration-500" />
             <span>{rating}</span>
           </div>
@@ -320,7 +321,7 @@ export default function CourseCard({
                     <span>{duration}</span>
                   </div>
                   <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
-                    <Users className="w-4 h-4 group-hover:scale-125 transition-transform duration-500" />
+                    <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-500" />
                     <span>{students.toLocaleString()} students</span>
                   </div>
                 </div>
@@ -426,14 +427,14 @@ export default function CourseCard({
 
       <CardFooter className="px-6 pb-6 pt-0">
         <div className="flex items-center justify-between w-full gap-3">
-          <div className="text-2xl font-bold text-primary group-hover:scale-125 group-hover:text-secondary transition-all duration-500">
+          <div className="text-2xl font-bold text-primary group-hover:scale-110 group-hover:text-secondary transition-all duration-500">
             ₹{price.toLocaleString('en-IN')}
           </div>
           <div className="flex gap-2 w-full sm:w-auto">
             <Button
               size="sm"
               variant="outline"
-              className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10 hover:scale-110 hover:shadow-lg transition-all duration-300"
+              className="w-full sm:w-auto border-primary text-primary  hover:scale-110 hover:shadow-lg transition-all duration-300"
               onClick={() => setIsFlipped((v) => !v)}
             >
               {isFlipped ? 'Show Basic Info' : 'View Details'}
@@ -443,7 +444,7 @@ export default function CourseCard({
               className="w-full sm:w-auto bg-gradient-to-r from-primary to-primary/90 text-white shadow-md shadow-primary/30 hover:shadow-xl hover:shadow-primary/50 hover:brightness-125 hover:scale-110 transition-all duration-300"
               asChild
             >
-              <Link to={`/course/${id}`}>
+              <Link to={`/course/${id}`} onClick={scrollToTop}>
                 Enroll Now
               </Link>
             </Button>

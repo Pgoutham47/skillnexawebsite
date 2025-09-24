@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 export default function Footer() {
   return (
@@ -14,25 +15,36 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <img src="/logo.svg" alt="SKILLneXa" className="h-8" />
             </div>
-            <p className="text-muted-foreground">
-              SkillNexa is a leading online learning platform that empowers students worldwide 
-              to master in-demand skills and advance their careers.
-            </p>
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold">🚀 Fuel Your Future with SkillNexa</h3>
+              <p className="text-muted-foreground">
+                From learning to leading—SkillNexa is your launchpad to success.
+                Unlock the skills that matter in today's world. Learn trending technologies, sharpen your mindset, and get ahead—while you're still in college.
+              </p>
+              <Button className="w-full sm:w-auto">
+                👉 Start Learning Today
+              </Button>
+            </div>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="sm">
-                <Facebook className="h-4 w-4" />
+              <Button variant="ghost" size="sm" asChild>
+                <a href="https://www.facebook.com/skillnexa09/" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="h-4 w-4" />
+                </a>
               </Button>
-              <Button variant="ghost" size="sm">
-                <Twitter className="h-4 w-4" />
+              <Button variant="ghost" size="sm" asChild>
+                <a href="https://x.com/skillnexa09" target="_blank" rel="noopener noreferrer">
+                  <Twitter className="h-4 w-4" />
+                </a>
               </Button>
-              <Button variant="ghost" size="sm">
-                <Instagram className="h-4 w-4" />
+              <Button variant="ghost" size="sm" asChild>
+                <a href="https://www.instagram.com/skillnexa.in/" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="h-4 w-4" />
+                </a>
               </Button>
-              <Button variant="ghost" size="sm">
-                <Linkedin className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Youtube className="h-4 w-4" />
+              <Button variant="ghost" size="sm" asChild>
+                <a href="http://www.youtube.com/@Skillnexa-l4i" target="_blank" rel="noopener noreferrer">
+                  <Youtube className="h-4 w-4" />
+                </a>
               </Button>
             </div>
           </div>
@@ -42,27 +54,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/courses" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   All Courses
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/instructor" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/instructor" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Become an Instructor
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Contact Us
                 </Link>
               </li>
@@ -74,42 +86,42 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Categories</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/courses?category=AI/ML" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=AI/ML" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   AI/ML
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Cybersecurity" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Cybersecurity" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Cybersecurity
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Prompt Engineering" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Prompt Engineering" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Prompt Engineering
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Data Science" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Data Science" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Data Science
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Self Employment" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Self Employment" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Self Employment
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Self Employment with AI" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Self Employment with AI" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Self Employment with AI
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Digital Marketing with AI" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=Digital Marketing with AI" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Digital Marketing with AI
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=GenAI & Multi-Agent Systems" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/courses?category=GenAI & Multi-Agent Systems" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   GenAI & Multi-Agent Systems
                 </Link>
               </li>
@@ -159,13 +171,13 @@ export default function Footer() {
             © 2024 SkillNexa. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
               Terms of Service
             </Link>
-            <Link to="/cookies" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/cookies" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
               Cookie Policy
             </Link>
           </div>

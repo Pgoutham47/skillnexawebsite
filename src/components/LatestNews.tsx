@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Calendar, User, ArrowRight } from 'lucide-react';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 const blogPosts = [
   {
@@ -51,14 +52,14 @@ export default function LatestNews() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-4 hover:scale-110 border-border relative overflow-hidden">
+            <Card key={post.id} className="group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden">
               <div className="relative">
                 <img 
                   src={post.image} 
                   alt={post.title}
-                  className="w-full h-48 object-cover group-hover:scale-125 transition-transform duration-700 ease-out"
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
-                <Badge className="absolute top-3 right-3 bg-primary text-white group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                <Badge className="absolute top-3 right-3 bg-primary text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                   {post.category}
                 </Badge>
               </div>
@@ -86,7 +87,7 @@ export default function LatestNews() {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all duration-500">{post.readTime}</span>
-                  <Link to={`/blog/${post.id}`}>
+                  <Link to={`/blog/${post.id}`} onClick={scrollToTop}>
                     <Button variant="ghost" size="sm" className="group/btn hover:scale-110 hover:shadow-lg transition-all duration-300">
                       Read More 
                       <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
@@ -99,7 +100,7 @@ export default function LatestNews() {
         </div>
 
         <div className="text-center">
-          <Link to="/blog">
+          <Link to="/blog" onClick={scrollToTop}>
             <Button variant="outline" size="lg" className="hover:scale-110 hover:shadow-lg transition-all duration-300">
               View All Articles
             </Button>

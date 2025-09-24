@@ -6,23 +6,33 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Upload, DollarSign, Users, TrendingUp, CheckCircle, Award, Shield, RefreshCw, Star } from 'lucide-react';
+import { Upload, DollarSign, Users, TrendingUp, CheckCircle, Award, Shield, RefreshCw, Star, Sparkles, Rocket, Zap, Globe, Target } from 'lucide-react';
 
 const benefits = [
   {
-    icon: DollarSign,
-    title: 'Earn Money',
-    description: 'Share your expertise and earn competitive revenue from course sales'
+    icon: Sparkles,
+    title: 'Expand Your Reach',
+    description: 'Share your expertise with a vibrant community of learners worldwide.'
   },
   {
-    icon: Users,
-    title: 'Teach Globally',
-    description: 'Reach students worldwide and build your personal brand'
+    icon: Rocket,
+    title: 'Make Real Impact',
+    description: 'Transform lives by equipping learners with skills that matter.'
   },
   {
-    icon: TrendingUp,
-    title: 'Grow Your Impact',
-    description: 'Create lasting impact by sharing knowledge and skills'
+    icon: Zap,
+    title: 'Flexibility & Freedom',
+    description: 'Design courses your way, on your schedule.'
+  },
+  {
+    icon: Globe,
+    title: 'Join a Thriving Network',
+    description: 'Collaborate with other thought leaders and innovators.'
+  },
+  {
+    icon: Target,
+    title: 'Earn Recognition & Rewards',
+    description: 'Get rewarded for your knowledge while building your personal brand.'
   }
 ];
 
@@ -73,9 +83,9 @@ export default function Instructor() {
       <main>
         {/* Hero Section */}
         <section className="container px-4 py-16 md:py-24">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-[fadeInUp_0.6s_ease_both]">
+          <div className="text-center max-w-4xl mx-auto mb-16 animate-[fadeInUp_0.6s_ease_both]">
             <Badge variant="secondary" className="text-primary font-medium mb-4">
-              Become an Instructor
+              🎓 Become an Instructor with SkillNexa
             </Badge>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -83,22 +93,28 @@ export default function Instructor() {
               <span className="text-primary">Impact Lives</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground">
-              Join thousands of instructors who are transforming careers through 
-              online education. Turn your expertise into a thriving teaching business.
-            </p>
+            <div className="text-xl text-muted-foreground space-y-4">
+              <p>
+                At SkillNexa, we believe knowledge grows when it's shared. As an instructor, you don't just teach—you inspire, guide, and shape the leaders of tomorrow.
+              </p>
+            </div>
+          </div>
+
+          {/* Why Teach Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-8">Why Teach with SkillNexa?</h2>
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-1 border-border/60 animate-[fadeInUp_0.6s_ease_both]" style={{animationDelay: `${index*120}ms`}}>
+              <Card key={index} className="text-center group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60 animate-[fadeInUp_0.6s_ease_both]" style={{animationDelay: `${index*120}ms`}}>
                 <CardContent className="p-6">
-                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <benefit.icon className="w-6 h-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                    <benefit.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">{benefit.title}</h3>
+                  <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -280,9 +296,9 @@ export default function Instructor() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <DollarSign className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Competitive Revenue Share</h3>
@@ -290,9 +306,9 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <Users className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Global Student Reach</h3>
@@ -300,9 +316,9 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <TrendingUp className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Marketing Support</h3>
@@ -310,9 +326,9 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <Award className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Professional Development</h3>
@@ -320,9 +336,9 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <Shield className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Payment Protection</h3>
@@ -330,9 +346,9 @@ export default function Instructor() {
                 </CardContent>
               </Card>
 
-              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border/60">
+              <Card className="text-center group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60">
                 <CardContent className="p-6">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <RefreshCw className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary group-hover:scale-105 transition-all duration-500">Ongoing Support</h3>

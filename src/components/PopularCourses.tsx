@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Users, Star } from 'lucide-react';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 const popularCourses = [
   {
@@ -60,7 +61,7 @@ export default function PopularCourses() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {popularCourses.map((course) => (
-            <Card key={course.id} className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border relative overflow-hidden">
+            <Card key={course.id} className="group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden">
               <div className="relative">
                 <img 
                   src={course.thumbnail} 
@@ -68,7 +69,7 @@ export default function PopularCourses() {
                   className="w-full h-48 object-cover rounded-t-lg group-hover:scale-130 transition-transform duration-700 ease-out"
                 />
                 {course.badge && (
-                  <Badge className="absolute top-3 left-3 bg-primary text-white group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                  <Badge className="absolute top-3 left-3 bg-primary text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                     {course.badge}
                   </Badge>
                 )}
@@ -92,7 +93,7 @@ export default function PopularCourses() {
                     {course.duration}
                   </div>
                   <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
-                    <Users className="h-4 w-4 group-hover:scale-125 transition-transform duration-500" />
+                    <Users className="h-4 w-4 group-hover:scale-110 transition-transform duration-500" />
                     {course.students.toLocaleString()}
                   </div>
                   <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
@@ -103,10 +104,10 @@ export default function PopularCourses() {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold text-primary group-hover:scale-125 group-hover:text-secondary transition-all duration-500">₹{course.price.toLocaleString()}</span>
+                    <span className="text-2xl font-bold text-primary group-hover:scale-110 group-hover:text-secondary transition-all duration-500">₹{course.price.toLocaleString()}</span>
                     <span className="text-sm line-through text-muted-foreground group-hover:text-foreground transition-colors duration-500">₹{course.originalPrice.toLocaleString()}</span>
                   </div>
-                  <Link to={`/course/${course.id}`}>
+                  <Link to={`/course/${course.id}`} onClick={scrollToTop}>
                     <Button 
                       size="sm"
                       className="hover:scale-110 hover:shadow-lg transition-all duration-300"
@@ -121,7 +122,7 @@ export default function PopularCourses() {
         </div>
 
         <div className="text-center">
-          <Link to="/courses">
+          <Link to="/courses" onClick={scrollToTop}>
             <Button 
               variant="outline" 
               size="lg"

@@ -79,19 +79,24 @@ export default function OutstandingCategories() {
       <div className="container px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Outstanding Categories</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">👉 Future-Ready Tracks</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Explore our most popular learning paths designed by industry experts
-          </p>
+          <div className="text-xl text-muted-foreground max-w-4xl mx-auto space-y-4">
+            <p>
+              At SkillNexa, we've curated courses in the most in-demand fields—designed to prepare you for tomorrow's opportunities. From technology and business to creativity and innovation, each track is built to give you practical knowledge, real-world application, and career acceleration.
+            </p>
+            <p className="text-lg font-medium text-primary">
+              ✨ Choose your path. Shape your future.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {categories.map((category, index) => (
             <Link key={category.title} to={category.link}>
-              <Card className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 cursor-pointer border-border/60 backdrop-blur-sm bg-white/80 relative overflow-hidden">
+              <Card className="group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-500 hover:-translate-y-6 hover:scale-110 cursor-pointer border-border/60 backdrop-blur-sm bg-white/80 relative overflow-hidden">
                 <CardContent className="p-6 text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.gradient} flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-lg relative overflow-hidden`}>
+                  <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${category.gradient} flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg relative overflow-hidden`}>
                     <category.icon className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   

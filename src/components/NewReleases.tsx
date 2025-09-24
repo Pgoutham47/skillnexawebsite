@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Users, Star } from 'lucide-react';
+import { scrollToTop } from '@/utils/scrollToTop';
 
 const newCourses = [
   {
@@ -69,7 +70,7 @@ export default function NewReleases() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {newCourses.map((course) => (
-            <Card key={course.id} className="group hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:-translate-y-6 hover:scale-115 border-border relative overflow-hidden">
+            <Card key={course.id} className="group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden">
               <div className="relative">
                 <img 
                   src={course.thumbnail} 
@@ -77,7 +78,7 @@ export default function NewReleases() {
                   className="w-full h-40 object-cover rounded-t-lg group-hover:scale-130 transition-transform duration-700 ease-out"
                 />
                 {course.isNew && (
-                  <Badge className="absolute top-3 left-3 bg-green-500 text-white group-hover:scale-125 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                  <Badge className="absolute top-3 left-3 bg-green-500 text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                     New
                   </Badge>
                 )}
@@ -107,8 +108,8 @@ export default function NewReleases() {
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-bold text-primary group-hover:scale-125 group-hover:text-secondary transition-all duration-500">₹{course.price.toLocaleString()}</span>
-                  <Link to={`/course/${course.id}`}>
+                  <span className="text-lg font-bold text-primary group-hover:scale-110 group-hover:text-secondary transition-all duration-500">₹{course.price.toLocaleString()}</span>
+                  <Link to={`/course/${course.id}`} onClick={scrollToTop}>
                     <Button 
                       size="sm" 
                       className="text-xs px-3 py-1 hover:scale-110 hover:shadow-lg transition-all duration-300"
@@ -123,7 +124,7 @@ export default function NewReleases() {
         </div>
 
         <div className="text-center">
-          <Link to="/courses">
+          <Link to="/courses" onClick={scrollToTop}>
             <Button variant="outline" size="lg">
               View All New Courses
             </Button>
