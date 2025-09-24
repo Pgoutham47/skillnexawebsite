@@ -1,36 +1,29 @@
 import React, { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import heroImage from '@/assets/hero-education.jpg';
-import { Star, Rocket, Lightbulb, Target, Users, Globe, Zap } from 'lucide-react';
 
 const features = [
   {
-    icon: Star,
     title: 'Cutting-Edge Skills',
     description: 'Stay ahead with knowledge that matches tomorrow\'s trends, not yesterday\'s syllabus.'
   },
   {
-    icon: Rocket,
     title: 'Learning by Doing',
     description: 'Real projects, real problems, real solutions—because true learning happens in action.'
   },
   {
-    icon: Lightbulb,
     title: 'Career Acceleration',
     description: 'Gain the edge that turns opportunities into achievements.'
   },
   {
-    icon: Target,
     title: 'Guidance That Matters',
     description: 'Mentorship from experts who have walked the path, not just taught the theory.'
   },
   {
-    icon: Users,
     title: 'A Thriving Community',
     description: 'Collaborate, network, and grow with peers who share your ambition.'
   },
   {
-    icon: Globe,
     title: 'Future-Ready Mindset',
     description: 'Build confidence, adaptability, and the skills to thrive in a world that never stops changing.'
   }
@@ -69,7 +62,7 @@ export default function WhatToExpect() {
       <div ref={sectionRef} className="container px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">🌟 What to Expect from SkillNexa</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">What to Expect from SkillNexa</span>
           </h2>
           <div className="text-xl text-muted-foreground max-w-4xl mx-auto space-y-4">
             <p>
@@ -94,7 +87,7 @@ export default function WhatToExpect() {
             <Card key={index} className="feature-card text-center group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border/60 opacity-0 translate-y-8">
               <CardContent className="p-6">
                 <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center shadow group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                  <feature.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-500" />
+                  <span className="text-primary font-bold text-xl group-hover:scale-110 transition-transform duration-500">{feature.title.charAt(0)}</span>
                 </div>
                 <h3 className="text-xl font-bold mb-3 group-hover:text-primary group-hover:scale-105 transition-all duration-500">{feature.title}</h3>
                 <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-500">{feature.description}</p>

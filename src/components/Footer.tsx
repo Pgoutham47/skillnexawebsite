@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 import { scrollToTop } from '@/utils/scrollToTop';
 
 export default function Footer() {
@@ -13,37 +12,37 @@ export default function Footer() {
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="SKILLneXa" className="h-8" />
+              <img src="/skillnexalogo.png" alt="SKILLneXa" className="h-8" />
             </div>
             <div className="space-y-3">
-              <h3 className="text-lg font-semibold">🚀 Fuel Your Future with SkillNexa</h3>
+              <h3 className="text-lg font-semibold">Fuel Your Future with SkillNexa</h3>
               <p className="text-muted-foreground">
                 From learning to leading—SkillNexa is your launchpad to success.
                 Unlock the skills that matter in today's world. Learn trending technologies, sharpen your mindset, and get ahead—while you're still in college.
               </p>
               <Button className="w-full sm:w-auto">
-                👉 Start Learning Today
+                Start Learning Today
               </Button>
             </div>
             <div className="flex space-x-4">
               <Button variant="ghost" size="sm" asChild>
                 <a href="https://www.facebook.com/skillnexa09/" target="_blank" rel="noopener noreferrer">
-                  <Facebook className="h-4 w-4" />
+                  Facebook
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a href="https://x.com/skillnexa09" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-4 w-4" />
+                  Twitter
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a href="https://www.instagram.com/skillnexa.in/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="h-4 w-4" />
+                  Instagram
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
                 <a href="http://www.youtube.com/@Skillnexa-l4i" target="_blank" rel="noopener noreferrer">
-                  <Youtube className="h-4 w-4" />
+                  YouTube
                 </a>
               </Button>
             </div>
@@ -133,15 +132,12 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">support@skillnexa.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-primary" />
                 <span className="text-muted-foreground">
                   123 Learning St, Education City, EC 12345
                 </span>

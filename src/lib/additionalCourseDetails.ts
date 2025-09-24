@@ -1,5 +1,43 @@
 // Additional course details for remaining courses
-export const additionalCourseDetails: Record<string, any> = {
+interface CourseDetail {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  originalPrice: number;
+  duration: string;
+  students: number;
+  rating: number;
+  reviews: number;
+  category: string;
+  thumbnail: string;
+  instructor: {
+    name: string;
+    title: string;
+    image: string;
+    students: number;
+    courses: number;
+    rating: number;
+    bio: string;
+  };
+  syllabus: Array<{
+    title: string;
+    lessons: number;
+    duration: string;
+    topics: string[];
+  }>;
+  projects: Array<{
+    title: string;
+    description: string;
+    skills: string[];
+    duration: string;
+  }>;
+  goals: string[];
+  prerequisites: string[];
+  outcomes: string[];
+}
+
+export const additionalCourseDetails: Record<string, CourseDetail> = {
   // Self Employment with AI Courses
   'self-ai-1': {
     id: 'self-ai-1',

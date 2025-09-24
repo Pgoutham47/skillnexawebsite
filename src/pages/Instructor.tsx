@@ -85,7 +85,7 @@ export default function Instructor() {
         <section className="container px-4 py-16 md:py-24">
           <div className="text-center max-w-4xl mx-auto mb-16 animate-[fadeInUp_0.6s_ease_both]">
             <Badge variant="secondary" className="text-primary font-medium mb-4">
-              🎓 Become an Instructor with SkillNexa
+              Become an Instructor with SkillNexa
             </Badge>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6">

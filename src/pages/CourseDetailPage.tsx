@@ -29,7 +29,20 @@ import { trendingCourses } from '@/lib/trending';
 import { courseDetails } from '@/lib/courseDetails';
 
 // Fallback course details for courses not yet in the detailed mapping
-const generateFallbackCourseDetails = (course: any) => ({
+interface Course {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  duration: string;
+  students: number;
+  rating: number;
+  category: string;
+  thumbnail: string;
+  instructor: string;
+}
+
+const generateFallbackCourseDetails = (course: Course) => ({
   id: course.id,
   title: course.title,
   description: course.description,
@@ -261,7 +274,7 @@ export default function CourseDetailPage() {
                 </CardHeader>
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
-                    {detailedCourse.syllabus.map((module: any, index: number) => (
+                    {detailedCourse.syllabus.map((module: { title: string; lessons: number; duration: string; topics: string[] }, index: number) => (
                       <AccordionItem key={index} value={`item-${index}`}>
                         <AccordionTrigger className="text-left">
                           <div className="flex items-center justify-between w-full mr-4">
@@ -303,7 +316,7 @@ export default function CourseDetailPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-6">
-                    {detailedCourse.projects.map((project: any, index: number) => (
+                    {detailedCourse.projects.map((project: { title: string; description: string; skills: string[]; duration: string }, index: number) => (
                       <div key={index} className="border rounded-lg p-6">
                         <h4 className="font-semibold text-lg mb-2">{project.title}</h4>
                         <p className="text-muted-foreground mb-4">{project.description}</p>

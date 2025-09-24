@@ -67,12 +67,11 @@ export default function About() {
         {/* Hero Section */}
         <section className="container px-4 py-16 md:py-24">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="secondary" className="text-primary font-medium mb-4">
+            <Badge variant="secondary" className="text-primary font-medium mb-4 text-xl px-6 py-3">
               About SkillNexa
             </Badge>
             
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="text-primary">SkillNexa</span>
             </h1>
             
             <div className="text-xl text-muted-foreground mb-8 leading-relaxed space-y-4">
@@ -126,7 +125,7 @@ export default function About() {
         <section className="container px-4 py-16">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">🌟 Mission</h2>
+              <h2 className="text-3xl font-bold mb-4">Mission</h2>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
                 "To bridge the gap between academia and industry by equipping undergraduates with practical, trending skills that accelerate their careers."
               </p>
@@ -134,7 +133,7 @@ export default function About() {
             
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold">🚀 Vision</h3>
+                <h2 className="text-3xl font-bold">Vision</h2>
                 <p className="text-muted-foreground text-lg">
                   "To be the most trusted edtech partner for students worldwide—bridging the gap between classroom education and real-world success."
                 </p>
@@ -151,14 +150,14 @@ export default function About() {
 
             {/* Impact Section */}
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-8">🌍 Impact</h2>
+              <h2 className="text-3xl font-bold mb-8">Impact</h2>
             </div>
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🎓</span>
+                    <Users className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Students First</h3>
@@ -170,7 +169,7 @@ export default function About() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🔑</span>
+                    <Target className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Bridging the Skill Gap</h3>
@@ -184,7 +183,7 @@ export default function About() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">🌐</span>
+                    <Globe className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Building a Future-Ready Generation</h3>
@@ -196,7 +195,7 @@ export default function About() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="text-2xl">💡</span>
+                    <Heart className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Beyond Degrees</h3>
@@ -215,7 +214,7 @@ export default function About() {
           <div className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/20 via-accent/10 to-transparent" />
           <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">🌟 What Makes SkillNexa Special</span></h2>
+            <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">What Makes SkillNexa Special</span></h2>
             <div className="text-muted-foreground max-w-4xl mx-auto space-y-4">
               <p>
                 At SkillNexa, we don't just teach—we transform the way you learn, grow, and succeed. Here's what sets us apart:
@@ -303,13 +302,13 @@ export default function About() {
         <section className="bg-surface py-16">
           <div className="container px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">🌟 Our Core Values</h2>
+              <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
               <div className="text-muted-foreground max-w-4xl mx-auto space-y-4">
                 <p>
                   At SkillNexa, everything we do is guided by values that empower learning, growth, and transformation.
                 </p>
                 <p className="text-lg font-medium text-primary">
-                  ✨ Our values aren't just words—they're the foundation of how SkillNexa shapes futures.
+                  Our values aren't just words—they're the foundation of how SkillNexa shapes futures.
                 </p>
               </div>
             </div>

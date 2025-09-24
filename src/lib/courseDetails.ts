@@ -1,7 +1,45 @@
 import { additionalCourseDetails } from './additionalCourseDetails';
 
 // Comprehensive course details mapping for all 24 courses
-export const courseDetails: Record<string, any> = {
+interface CourseDetail {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  originalPrice: number;
+  duration: string;
+  students: number;
+  rating: number;
+  reviews: number;
+  category: string;
+  thumbnail: string;
+  instructor: {
+    name: string;
+    title: string;
+    image: string;
+    students: number;
+    courses: number;
+    rating: number;
+    bio: string;
+  };
+  syllabus: Array<{
+    title: string;
+    lessons: number;
+    duration: string;
+    topics: string[];
+  }>;
+  projects: Array<{
+    title: string;
+    description: string;
+    skills: string[];
+    duration: string;
+  }>;
+  goals: string[];
+  prerequisites: string[];
+  outcomes: string[];
+}
+
+export const courseDetails: Record<string, CourseDetail> = {
   // AI/ML Courses
   'ai-ml-1': {
     id: 'ai-ml-1',

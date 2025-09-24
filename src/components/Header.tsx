@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Menu, X, ChevronDown, User, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -33,13 +32,13 @@ export default function Header() {
         {/* Logo and Categories */}
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2" onClick={scrollToTop}>
-            <img src="/logo.svg" alt="SKILLneXa" className="h-8" />
+            <img src="/skillnexalogo.png" alt="SKILLneXa" className="h-8" />
           </Link>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="hidden md:flex items-center gap-1">
-                Categories <ChevronDown className="h-4 w-4" />
+                Categories
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="w-64">
@@ -57,13 +56,12 @@ export default function Header() {
         {/* Search Bar */}
         <div className="hidden md:flex flex-1 max-w-md mx-8">
           <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
             <Input
               type="search"
               placeholder="Search courses..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 w-full"
+              className="w-full"
             />
           </div>
         </div>
@@ -85,7 +83,7 @@ export default function Header() {
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isMenuOpen ? 'Close' : 'Menu'}
         </Button>
       </div>
 
@@ -120,11 +118,10 @@ export default function Header() {
         <div className="md:hidden border-t bg-background">
           <div className="container px-4 py-4 space-y-4">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
                 type="search"
                 placeholder="Search courses..."
-                className="pl-10 w-full"
+                className="w-full"
               />
             </div>
             

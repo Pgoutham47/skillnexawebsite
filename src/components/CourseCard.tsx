@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Clock, Users, Star, ChevronDown, Play, CheckCircle, Award, BookOpen, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Check } from 'lucide-react';
 import { scrollToTop } from '@/utils/scrollToTop';
 
 interface CourseCardProps {
@@ -21,7 +21,17 @@ interface CourseCardProps {
 }
 
 // Course details mapping for comprehensive information
-const courseDetails: Record<string, any> = {
+interface CourseDetail {
+  syllabus: Array<{
+    title: string;
+    lessons: number;
+    duration: string;
+  }>;
+  projects: string[];
+  goals: string[];
+}
+
+const courseDetails: Record<string, CourseDetail> = {
   'ai-ml-1': {
     syllabus: [
       { title: 'Introduction to AI & ML', lessons: 6, duration: '8 hours' },
@@ -292,7 +302,7 @@ export default function CourseCard({
             {category}
           </Badge>
           <div className="absolute top-4 right-4 flex items-center gap-1 bg-black/50 text-white px-2 py-1 rounded text-sm group-hover:scale-110 group-hover:bg-primary/80 transition-all duration-500">
-            <Star className="w-3 h-3 fill-current group-hover:rotate-180 transition-transform duration-500" />
+            <span>★</span>
             <span>{rating}</span>
           </div>
         </div>
@@ -317,11 +327,9 @@ export default function CourseCard({
                 </div>
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
-                    <Clock className="w-4 h-4 group-hover:rotate-180 transition-transform duration-500" />
                     <span>{duration}</span>
                   </div>
                   <div className="flex items-center gap-1 group-hover:scale-110 group-hover:text-primary transition-all duration-500">
-                    <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-500" />
                     <span>{students.toLocaleString()} students</span>
                   </div>
                 </div>
@@ -335,7 +343,6 @@ export default function CourseCard({
                   {/* Course Overview */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <BookOpen className="w-4 h-4 text-primary" />
                       <span className="font-semibold text-primary">Course Overview</span>
                     </div>
                     <p className="text-muted-foreground text-xs leading-relaxed">
@@ -346,7 +353,6 @@ export default function CourseCard({
                   {/* Course Details */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Target className="w-4 h-4 text-primary" />
                       <span className="font-semibold text-primary">What You'll Learn</span>
                     </div>
                     <div className="space-y-2">
@@ -355,7 +361,7 @@ export default function CourseCard({
                         if (details && details.goals) {
                           return details.goals.slice(0, 4).map((goal: string, index: number) => (
                             <div key={index} className="flex items-start gap-2">
-                              <CheckCircle className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                              <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                               <span className="text-muted-foreground text-xs leading-tight">{goal}</span>
                             </div>
                           ));
@@ -369,7 +375,7 @@ export default function CourseCard({
                           ];
                           return fallbackGoals.map((goal, index) => (
                             <div key={index} className="flex items-start gap-2">
-                              <CheckCircle className="w-3 h-3 text-green-500 mt-0.5 flex-shrink-0" />
+                              <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
                               <span className="text-muted-foreground text-xs leading-tight">{goal}</span>
                             </div>
                           ));
@@ -381,18 +387,16 @@ export default function CourseCard({
                   {/* Course Modules */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
-                      <Play className="w-4 h-4 text-primary" />
                       <span className="font-semibold text-primary">Course Structure</span>
                     </div>
                     <div className="space-y-2">
                       {(() => {
                         const details = courseDetails[id];
                         if (details && details.syllabus) {
-                          return details.syllabus.slice(0, 3).map((module: any, index: number) => (
+                          return details.syllabus.slice(0, 3).map((module: { title: string; lessons: number }, index: number) => (
                             <div key={index} className="flex items-center justify-between bg-muted/50 rounded-lg px-3 py-2">
                               <span className="text-muted-foreground text-xs font-medium">{module.title}</span>
                               <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                                <Play className="w-2 h-2" />
                                 <span>{module.lessons} lessons</span>
                               </div>
                             </div>
@@ -408,7 +412,6 @@ export default function CourseCard({
                             <div key={index} className="flex items-center justify-between bg-muted/50 rounded-lg px-3 py-2">
                               <span className="text-muted-foreground text-xs font-medium">{module.title}</span>
                               <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                                <Play className="w-2 h-2" />
                                 <span>{module.lessons} lessons</span>
                               </div>
                             </div>

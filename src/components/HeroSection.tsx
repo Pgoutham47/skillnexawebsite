@@ -2,29 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Users, Award, Video, GraduationCap } from 'lucide-react';
 import heroImage from '@/assets/hero-education.jpg';
 import { scrollToTop } from '@/utils/scrollToTop';
 
 export default function HeroSection() {
   const trustBadges = [
     {
-      icon: Video,
       title: 'Live Classes',
       description: 'Interactive learning sessions'
     },
     {
-      icon: GraduationCap,
       title: 'Internships',
       description: 'Real-world experience'
     },
     {
-      icon: Award,
       title: 'Certificates',
       description: 'Industry recognized'
     },
     {
-      icon: Users,
       title: 'Mentors',
       description: 'Expert guidance'
     }
@@ -37,12 +32,8 @@ export default function HeroSection() {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge variant="secondary" className="text-primary font-medium hover:scale-110 hover:rotate-3 transition-all duration-500">
-                #1 Learning Platform
-              </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight group">
-                <span className="text-primary group-hover:scale-110 transition-transform duration-500 inline-block">SkillNexa</span>:{' '}
                 Where learning meets limitless possibilities.
               </h1>
               
@@ -73,7 +64,7 @@ export default function HeroSection() {
               {trustBadges.map((badge, index) => (
                 <div key={index} className="text-center space-y-2 group hover:scale-110 hover:rounded-lg hover:p-4 transition-all duration-500">
                   <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <badge.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-500" />
+                    <span className="text-primary font-bold text-lg group-hover:scale-110 transition-transform duration-500">{badge.title.charAt(0)}</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm group-hover:text-primary group-hover:scale-105 transition-all duration-500">{badge.title}</h3>
