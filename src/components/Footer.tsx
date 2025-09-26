@@ -86,7 +86,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Categories</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/courses?category=AI/ML" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=AI%2FML" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   AI/ML
                 </Link>
               </li>
@@ -96,32 +96,32 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Prompt Engineering" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=Prompt%20Engineering" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Prompt Engineering
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Data Science" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=Data%20Science" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Data Science
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Self Employment" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=Self%20Employment" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Self Employment
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Self Employment with AI" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=Self%20Employment%20with%20AI" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Self Employment with AI
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=Digital Marketing with AI" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=Digital%20Marketing%20with%20AI" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   Digital Marketing with AI
                 </Link>
               </li>
               <li>
-                <Link to="/courses?category=GenAI & Multi-Agent Systems" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
+                <Link to="/courses?category=GenAI%20%26%20Multi-Agent%20Systems" className="text-muted-foreground hover:text-primary transition-colors" onClick={scrollToTop}>
                   GenAI & Multi-Agent Systems
                 </Link>
               </li>
