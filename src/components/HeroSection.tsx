@@ -1,36 +1,70 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/hero-education.jpg';
 import { scrollToTop } from '@/utils/scrollToTop';
+import { Video, Briefcase, Award, Users } from 'lucide-react';
 
 export default function HeroSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const elements = entry.target.querySelectorAll('.hero-animate');
+            elements.forEach((element, index) => {
+              setTimeout(() => {
+                element.classList.add('animate-[fadeInScale_1s_ease-out_both]');
+              }, index * 200);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   const trustBadges = [
     {
       title: 'Live Classes',
-      description: 'Interactive learning sessions'
+      description: 'Interactive learning sessions',
+      icon: Video
     },
     {
       title: 'Internships',
-      description: 'Real-world experience'
+      description: 'Real-world experience',
+      icon: Briefcase
     },
     {
       title: 'Certificates',
-      description: 'Industry recognized'
+      description: 'Industry recognized',
+      icon: Award
     },
     {
       title: 'Mentors',
-      description: 'Expert guidance'
+      description: 'Expert guidance',
+      icon: Users
     }
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-surface to-accent/20">
-      <div className="container px-4 py-16 md:py-24">
+    <section className="py-16 bg-gradient-to-b from-background via-accent/10 to-background relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+           style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 80% 30%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 40% 80%, hsl(var(--primary)) 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+      />
+      <div ref={sectionRef} className="container px-4 py-16 md:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 hero-animate opacity-0">
             <div className="space-y-4">
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight group">
@@ -64,7 +98,7 @@ export default function HeroSection() {
               {trustBadges.map((badge, index) => (
                 <div key={index} className="text-center space-y-2 group hover:scale-110 hover:rounded-lg hover:p-4 transition-all duration-500">
                   <div className="mx-auto w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
-                    <span className="text-primary font-bold text-lg group-hover:scale-110 transition-transform duration-500">{badge.title.charAt(0)}</span>
+                    <badge.icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm group-hover:text-primary group-hover:scale-105 transition-all duration-500">{badge.title}</h3>
@@ -76,7 +110,7 @@ export default function HeroSection() {
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
+          <div className="relative hero-animate opacity-0">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group hover:scale-105 transition-transform duration-700">
               <img 
                 src={heroImage}

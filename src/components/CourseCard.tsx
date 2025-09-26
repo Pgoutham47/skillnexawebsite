@@ -311,7 +311,7 @@ export default function CourseCard({
       <CardContent className="p-6">
         <div className="[perspective:1000px]">
           <div
-            className={`relative h-full min-h-[160px] transition-transform duration-700 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
+            className={`relative h-full min-h-[160px] transition-transform duration-500 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
           >
             {/* Front */}
             <div className="absolute inset-0 [backface-visibility:hidden]">
@@ -340,12 +340,18 @@ export default function CourseCard({
             <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] overflow-y-auto">
               <div className="h-full p-3">
                 <div className="space-y-4 text-sm">
+                  {/* Price display on back */}
+                  <div className="text-center mb-4">
+                    <div className="text-2xl font-bold text-primary">
+                      ₹{price.toLocaleString('en-IN')}
+                    </div>
+                  </div>
                   {/* Course Overview */}
                   <div>
                     <div className="flex items-center gap-2 mb-3">
                       <span className="font-semibold text-primary">Course Overview</span>
                     </div>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {description}
                     </p>
                   </div>
@@ -362,7 +368,7 @@ export default function CourseCard({
                           return details.goals.slice(0, 4).map((goal: string, index: number) => (
                             <div key={index} className="flex items-start gap-2">
                               <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-muted-foreground text-xs leading-tight">{goal}</span>
+                              <span className="text-muted-foreground text-sm leading-relaxed">{goal}</span>
                             </div>
                           ));
                         } else {
@@ -376,7 +382,7 @@ export default function CourseCard({
                           return fallbackGoals.map((goal, index) => (
                             <div key={index} className="flex items-start gap-2">
                               <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                              <span className="text-muted-foreground text-xs leading-tight">{goal}</span>
+                              <span className="text-muted-foreground text-sm leading-relaxed">{goal}</span>
                             </div>
                           ));
                         }
@@ -395,8 +401,8 @@ export default function CourseCard({
                         if (details && details.syllabus) {
                           return details.syllabus.slice(0, 3).map((module: { title: string; lessons: number }, index: number) => (
                             <div key={index} className="flex items-center justify-between bg-muted/50 rounded-lg px-3 py-2">
-                              <span className="text-muted-foreground text-xs font-medium">{module.title}</span>
-                              <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <span className="text-muted-foreground text-sm font-medium">{module.title}</span>
+                              <div className="flex items-center gap-1 text-sm text-muted-foreground">
                                 <span>{module.lessons} lessons</span>
                               </div>
                             </div>
@@ -410,8 +416,8 @@ export default function CourseCard({
                           ];
                           return fallbackModules.map((module, index) => (
                             <div key={index} className="flex items-center justify-between bg-muted/50 rounded-lg px-3 py-2">
-                              <span className="text-muted-foreground text-xs font-medium">{module.title}</span>
-                              <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                              <span className="text-muted-foreground text-sm font-medium">{module.title}</span>
+                              <div className="flex items-center gap-1 text-sm text-muted-foreground">
                                 <span>{module.lessons} lessons</span>
                               </div>
                             </div>

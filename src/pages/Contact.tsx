@@ -89,8 +89,12 @@ export default function Contact() {
       
       <main>
         {/* Hero Section */}
-        <section className="container px-4 py-16 md:py-24">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+        <section className="py-16 bg-gradient-to-b from-background via-accent/10 to-background relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+               style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 80% 30%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 40% 80%, hsl(var(--primary)) 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+          />
+          <div className="container px-4 py-16 md:py-24">
+            <div className="text-center max-w-3xl mx-auto mb-16">
             <Badge variant="secondary" className="text-primary font-medium mb-4">
               Get in Touch
             </Badge>
@@ -120,6 +124,7 @@ export default function Contact() {
                 </CardContent>
               </Card>
             ))}
+          </div>
           </div>
         </section>
 
@@ -282,8 +287,8 @@ export default function Contact() {
         {/* Support Categories */}
         <section className="container px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How Can We Help?</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">How Can We Help?</span></h2>
+            <p className="text-xl text-muted-foreground">
               Choose the category that best describes your inquiry
             </p>
           </div>

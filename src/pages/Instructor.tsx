@@ -82,8 +82,12 @@ export default function Instructor() {
       
       <main>
         {/* Hero Section */}
-        <section className="container px-4 py-16 md:py-24">
-          <div className="text-center max-w-4xl mx-auto mb-16 animate-[fadeInUp_0.6s_ease_both]">
+        <section className="py-16 bg-gradient-to-b from-background via-accent/10 to-background relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+               style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 80% 30%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 40% 80%, hsl(var(--primary)) 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+          />
+          <div className="container px-4 py-16 md:py-24">
+            <div className="text-center max-w-4xl mx-auto mb-16 animate-[fadeInUp_0.6s_ease_both]">
             <Badge variant="secondary" className="text-primary font-medium mb-4">
               Become an Instructor with SkillNexa
             </Badge>
@@ -102,7 +106,7 @@ export default function Instructor() {
 
           {/* Why Teach Section */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-8">Why Teach with SkillNexa?</h2>
+            <h2 className="text-3xl font-bold mb-8"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Why Teach with SkillNexa?</span></h2>
           </div>
 
           {/* Benefits Grid */}
@@ -118,6 +122,7 @@ export default function Instructor() {
                 </CardContent>
               </Card>
             ))}
+          </div>
           </div>
         </section>
 
@@ -227,8 +232,8 @@ export default function Instructor() {
         {/* How to Become an Instructor */}
         <section className="container px-4 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How to Become an Instructor</h2>
-            <p className="text-muted-foreground">
+            <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">How to Become an Instructor</span></h2>
+            <p className="text-xl text-muted-foreground">
               Follow our comprehensive guide to start your teaching journey
             </p>
           </div>
@@ -289,8 +294,8 @@ export default function Instructor() {
         <section className="bg-surface py-16">
           <div className="container px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Instructor Benefits</h2>
-              <p className="text-muted-foreground">
+              <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Instructor Benefits</span></h2>
+              <p className="text-xl text-muted-foreground">
                 Join our community and enjoy these exclusive benefits
               </p>
             </div>
@@ -362,7 +367,7 @@ export default function Instructor() {
         {/* CTA Section */}
         <section className="bg-primary text-primary-foreground py-16">
           <div className="container px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Teaching?</h2>
+            <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Ready to Start Teaching?</span></h2>
             <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
               Join our community of expert instructors and start making an impact today
             </p>

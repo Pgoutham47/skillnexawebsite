@@ -28,11 +28,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       {/* Top Row - Logo, Categories, Search, Auth Buttons */}
-      <div className="container flex h-16 items-center justify-between px-4">
+      <div className="container flex h-20 items-center justify-between px-4">
         {/* Logo and Categories */}
         <div className="flex items-center gap-6">
           <Link to="/" className="flex items-center gap-2" onClick={scrollToTop}>
-            <img src="/skillnexalogo.png" alt="SKILLneXa" className="h-8" />
+            <img src="/skillnexalogo.png" alt="SKILLneXa" className="h-12" />
           </Link>
           
           <DropdownMenu>
@@ -90,23 +90,23 @@ export default function Header() {
       {/* Bottom Row - Navigation Menu (Desktop) */}
       <div className="hidden lg:block border-t border-border/40">
         <div className="container px-4">
-          <nav className="flex items-center justify-center space-x-8 py-3">
-            <Link to="/" className="text-sm font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
+          <nav className="flex items-center justify-center space-x-10 py-4">
+            <Link to="/" className="text-base font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
               Home
             </Link>
-            <Link to="/courses" className="text-sm font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
+            <Link to="/courses" className="text-base font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
               Courses
             </Link>
-            <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
+            <Link to="/about" className="text-base font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
               About Us
             </Link>
-            <Link to="/instructor" className="text-sm font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
+            <Link to="/instructor" className="text-base font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
               Become an Instructor
             </Link>
-            <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
+            <Link to="/blog" className="text-base font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
               Blog
             </Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
+            <Link to="/contact" className="text-base font-medium hover:text-primary transition-colors" onClick={scrollToTop}>
               Contact
             </Link>
           </nav>
@@ -126,22 +126,22 @@ export default function Header() {
             </div>
             
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
+              <Link to="/" className="text-base font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
                 Home
               </Link>
-              <Link to="/courses" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
+              <Link to="/courses" className="text-base font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
                 Courses
               </Link>
-              <Link to="/about" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
+              <Link to="/about" className="text-base font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
                 About Us
               </Link>
-              <Link to="/instructor" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
+              <Link to="/instructor" className="text-base font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
                 Become an Instructor
               </Link>
-              <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
+              <Link to="/blog" className="text-base font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
                 Blog
               </Link>
-              <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
+              <Link to="/contact" className="text-base font-medium hover:text-primary transition-colors" onClick={() => { scrollToTop(); setIsMenuOpen(false); }}>
                 Contact
               </Link>
             </nav>

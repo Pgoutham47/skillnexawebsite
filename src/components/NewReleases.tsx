@@ -59,10 +59,13 @@ const newCourses = [
 
 export default function NewReleases() {
   return (
-    <section className="py-16 bg-muted/50">
+    <section className="py-16 bg-gradient-to-b from-background via-accent/10 to-background relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+           style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 80% 30%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 40% 80%, hsl(var(--primary)) 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+      />
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">New Releases</h2>
+          <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">New Releases</span></h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Fresh content from our expert instructors, just launched this month
           </p>

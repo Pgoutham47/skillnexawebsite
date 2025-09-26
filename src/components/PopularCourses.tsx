@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -49,19 +49,53 @@ const popularCourses = [
 ];
 
 export default function PopularCourses() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.course-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate-[slideInUp_0.8s_ease-out_both]');
+              }, index * 150);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
-    <section className="py-16 bg-muted/50">
-      <div className="container px-4">
+    <section className="py-16 bg-gradient-to-b from-background via-accent/10 to-background relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+           style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 80% 30%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 40% 80%, hsl(var(--primary)) 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+      />
+      <div ref={sectionRef} className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Popular Courses</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of students in our most loved courses
-          </p>
+          <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Popular Courses at SkillNexa</span></h2>
+          <div className="text-xl text-muted-foreground max-w-4xl mx-auto space-y-4">
+            <p>
+              Stay ahead of the curve with courses that are shaping the future. Each program is designed to give you practical skills, industry insights, and a competitive edge.
+            </p>
+            <p className="text-lg font-medium text-primary">
+              Learn what's trending. Lead what's next.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {popularCourses.map((course) => (
-            <Card key={course.id} className="group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden">
+            <Card key={course.id} className="course-card group hover:shadow-2xl hover:shadow-primary/50 transition-all duration-500 hover:-translate-y-6 hover:scale-105 border-border relative overflow-hidden opacity-0 translate-y-8">
               <div className="relative">
                 <img 
                   src={course.thumbnail} 
@@ -102,10 +136,10 @@ export default function PopularCourses() {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between pt-2 border-t border-border/50 bg-background/50">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold text-primary group-hover:scale-110 group-hover:text-secondary transition-all duration-500">₹{course.price.toLocaleString()}</span>
-                    <span className="text-sm line-through text-muted-foreground group-hover:text-foreground transition-colors duration-500">₹{course.originalPrice.toLocaleString()}</span>
+                    <span className="text-2xl font-bold text-primary">₹{course.price.toLocaleString()}</span>
+                    <span className="text-sm line-through text-muted-foreground">₹{course.originalPrice.toLocaleString()}</span>
                   </div>
                   <Link to={`/course/${course.id}`} onClick={scrollToTop}>
                     <Button 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -40,11 +40,40 @@ const blogPosts = [
 ];
 
 export default function LatestNews() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.news-card');
+            cards.forEach((card, index) => {
+              setTimeout(() => {
+                card.classList.add('animate-[slideInLeft_0.8s_ease-out_both]');
+              }, index * 200);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   return (
-    <section className="py-16 bg-muted/50">
-      <div className="container px-4">
+    <section className="py-16 bg-gradient-to-b from-background via-accent/10 to-background relative overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]"
+           style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 80% 30%, hsl(var(--primary)) 2px, transparent 2px), radial-gradient(circle at 40% 80%, hsl(var(--primary)) 2px, transparent 2px)', backgroundSize: '24px 24px' }}
+      />
+      <div ref={sectionRef} className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Latest News & Updates</h2>
+          <h2 className="text-3xl font-bold mb-4"><span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Latest News & Updates</span></h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Stay updated with the latest trends, tips, and insights from the world of technology and education
           </p>
@@ -52,7 +81,7 @@ export default function LatestNews() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden">
+            <Card key={post.id} className="news-card group hover:shadow-2xl hover:shadow-primary/50  transition-all duration-500 hover:-translate-y-6 hover:scale-110 border-border relative overflow-hidden opacity-0 translate-x-8">
               <div className="relative">
                 <img 
                   src={post.image} 
